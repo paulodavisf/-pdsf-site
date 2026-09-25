@@ -158,11 +158,146 @@ section{position:relative;scroll-margin-top:76px}
  *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
  .reveal{opacity:1;transform:none}.hero-photo{transform:none}.hero-art{transform:none}.flow-trigger.is-holding .crystal-progress circle{animation:none;stroke-dashoffset:0}.flow-trigger.is-activated .crystal-svg{animation:none}.flow-enter{opacity:1;transform:none}
 }
+
+/* Full-screen interactive entry: a PDSF gemstone wakes the continuous flow. */
+body.gateway-open{overflow:hidden}
+body.gateway-open .skip-link{visibility:hidden}
+.flow-gateway{position:fixed;inset:0;z-index:100;overflow:hidden;display:block;background:#08090a;color:var(--paper);isolation:isolate;opacity:1;transition:opacity .85s cubic-bezier(.2,.7,.2,1)}
+.flow-gateway[hidden]{display:none!important}
+.flow-gateway.is-leaving{opacity:0;pointer-events:none}
+.gate-vignette,.gate-grain{position:absolute;inset:0;pointer-events:none}
+.gate-vignette{z-index:-2;background:radial-gradient(ellipse at 50% 46%,rgba(72,15,23,.26),transparent 42%),radial-gradient(ellipse at 50% 50%,transparent 30%,rgba(0,0,0,.75) 100%),linear-gradient(135deg,#141516,#070808 64%)}
+.gate-grain{z-index:3;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.45'/%3E%3C/svg%3E")}
+.gate-header{position:absolute;z-index:5;top:clamp(18px,4vh,42px);left:clamp(18px,5vw,72px);right:clamp(18px,5vw,72px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.gate-brand{display:block;width:clamp(112px,13vw,168px);line-height:0;padding:3px 8px;background:var(--paper);border-radius:2px}
+.gate-brand img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.gate-enter{justify-self:center;display:inline-flex;align-items:center;gap:15px;padding:0 0 8px;border-bottom:1px solid rgba(244,242,238,.48);color:#f4f2ee;font-size:9px;letter-spacing:.2em;text-transform:uppercase;transition:color .22s,border-color .22s,letter-spacing .22s}
+.gate-enter:hover,.gate-enter:focus-visible{color:#d9a7ae;border-color:#d9a7ae;letter-spacing:.24em}
+.gate-enter span{font-size:15px;line-height:1}
+.gate-sound{justify-self:end;display:flex;align-items:center;gap:8px;min-height:34px;padding:0 11px;border:1px solid rgba(244,242,238,.22);border-radius:22px;background:rgba(10,10,11,.22);color:var(--paper);cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:border-color .2s,background .2s}
+.gate-sound:hover,.gate-sound[aria-pressed=true]{border-color:rgba(244,242,238,.58);background:rgba(244,242,238,.08)}
+.gate-sound svg{width:14px;height:14px}.gate-sound span{font-size:8px;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
+.gate-stage{position:absolute;inset:0;z-index:1;display:grid;place-items:center;overflow:hidden;perspective:1000px}
+.gate-ribbon{position:absolute;inset:-12% -16%;width:132%;height:124%;opacity:.46;overflow:visible;transform:translate3d(calc(var(--gx,0)*15px),calc(var(--gy,0)*12px),0) scale(1.04);transition:opacity .8s,transform .5s}
+.gate-ribbon path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.gate-ribbon-silver{stroke:url(#gateSilver);stroke-width:29;opacity:.62}.gate-ribbon-wine{stroke:url(#gateWine);stroke-width:25}.gate-ribbon-carbon{stroke:#121415;stroke-width:15}.gate-ribbon-glint{stroke:rgba(244,242,238,.78);stroke-width:1.6;stroke-dasharray:2 78;animation:gate-glide 14s linear infinite}.gate-ribbon-run{stroke:#e6c7c9;stroke-width:1.1;stroke-dasharray:1 99;stroke-dashoffset:100;opacity:0}
+@keyframes gate-glide{to{stroke-dashoffset:-960}}
+.gate-aura{position:absolute;width:min(74vw,72vh,740px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(106,25,37,.19),rgba(91,17,26,.07) 43%,transparent 72%);filter:blur(9px);transition:transform 1.2s,opacity 1.2s}
+.crystal-trigger{position:relative;z-index:2;display:grid;place-items:center;width:min(72vw,61vh,620px);aspect-ratio:1;padding:0;border:0;background:transparent;color:var(--paper);cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent;transform:translate3d(calc(var(--gx,0)*-11px),calc(var(--gy,0)*-9px),0);transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .5s}
+.crystal-trigger:focus-visible{outline:1px solid rgba(244,242,238,.72);outline-offset:8px;border-radius:50%}
+.crystal-art{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 28px 54px rgba(0,0,0,.62));transform-style:preserve-3d;animation:gem-drift 10s ease-in-out infinite}
+@keyframes gem-drift{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+.gem-shadow{fill:rgba(91,17,26,.55);opacity:.64}
+.gem-solid{transform-origin:300px 300px;transition:transform 1s cubic-bezier(.16,.8,.22,1),filter .6s}
+.gem-outline{stroke:rgba(244,242,238,.6);stroke-width:1.1}
+.gem-facet{stroke:rgba(244,242,238,.25);stroke-width:1}.gem-facet-light{fill:url(#gemSilver);opacity:.55}.gem-facet-wine{fill:url(#gemWine);opacity:.8}.gem-facet-dark{fill:#17191b;opacity:.9}
+.gem-vein{fill:none;stroke:rgba(244,242,238,.22);stroke-width:1.2}
+.gem-flow-under{fill:none;stroke:#17191b;stroke-width:30;stroke-linecap:round;filter:blur(2px)}.gem-flow{fill:none;stroke:url(#gateWine);stroke-width:19;stroke-linecap:round}.gem-contour{fill:none;stroke:url(#gemSilver);stroke-width:2.3;opacity:.8}
+.gate-hold-ring{position:absolute;inset:5%;width:90%;height:90%;transform:rotate(-90deg);overflow:visible;pointer-events:none}.gate-hold-ring circle{fill:none;stroke:#d7b5b8;stroke-width:.65;stroke-dasharray:100;stroke-dashoffset:100;opacity:.88}
+.crystal-trigger.is-holding{filter:drop-shadow(0 0 34px rgba(184,182,177,.25))}.crystal-trigger.is-holding .gate-hold-ring circle{animation:gate-hold 1.35s linear forwards}.crystal-trigger.is-holding .gem-solid{transform:scale(1.055) rotate(4deg);filter:brightness(1.28)}.crystal-trigger.is-holding .gem-flow{stroke:#c8858d;stroke-width:23}
+@keyframes gate-hold{to{stroke-dashoffset:0}}
+.flow-gateway.is-awake .gate-aura{transform:scale(1.24);opacity:1}.flow-gateway.is-awake .gate-ribbon{opacity:.82}.flow-gateway.is-awake .gate-ribbon-run{opacity:.9;animation:gate-run 1.45s linear infinite}
+@keyframes gate-run{to{stroke-dashoffset:-100}}
+.flow-gateway.is-awake .crystal-art{animation:gem-awake 2.9s ease-in-out infinite}
+.flow-gateway.is-awake .gem-solid{transform:scale(1.035) rotate(-2deg);filter:brightness(1.18)}
+.flow-gateway.is-awake .gem-contour{stroke:#fff;filter:drop-shadow(0 0 9px rgba(200,133,141,.76))}
+.flow-gateway.is-awake .gem-flow{stroke:#bf6570;stroke-dasharray:20 220;animation:gem-current 2.2s linear infinite}
+@keyframes gem-awake{50%{transform:translateY(-9px) rotate(3deg) scale(1.06)}}
+@keyframes gem-current{to{stroke-dashoffset:-240}}
+.flow-gateway.is-awake .gate-title{color:#e4c9cc;text-shadow:0 0 24px rgba(200,133,141,.24)}
+.gate-caption{position:absolute;z-index:4;left:24px;right:24px;bottom:clamp(98px,16vh,150px);text-align:center;pointer-events:none}
+.gate-eyebrow{display:flex;justify-content:center;gap:10px;color:#d4d1cc;font-size:8px;letter-spacing:.31em;text-transform:uppercase}
+.gate-title{margin:14px 0 0;color:rgba(244,242,238,.84);font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(23px,3.5vw,42px);font-weight:400;letter-spacing:-.025em;transition:color .6s,text-shadow .6s}
+.gate-prompt{position:absolute;z-index:4;left:20px;right:20px;bottom:clamp(26px,5vh,48px);display:grid;justify-items:center;gap:7px;text-align:center;transition:transform .4s,opacity .4s}
+.gate-prompt-main{color:rgba(244,242,238,.64);font-size:8px;letter-spacing:.28em;text-transform:uppercase}
+.gate-prompt-sub{color:rgba(184,182,177,.57);font-size:9px;letter-spacing:.06em}
+.flow-gateway.is-awake .gate-prompt-main{color:#f4f2ee}.flow-gateway.is-awake .gate-prompt-sub{color:#c8858d}
+@media(max-width:700px){
+ .gate-header{top:20px;left:17px;right:17px;grid-template-columns:1fr auto;gap:12px}
+ .gate-brand{width:112px;padding:2px 5px}
+ .gate-enter{grid-column:2;grid-row:1;font-size:8px;letter-spacing:.16em;padding-bottom:6px}
+ .gate-sound{position:absolute;top:48px;right:0;min-height:30px;padding:0 9px;background:rgba(9,9,10,.28)}
+ .gate-sound span{font-size:7px}
+ .gate-ribbon{inset:-3% -75%;width:250%;height:110%;opacity:.38}
+ .gate-ribbon-silver{stroke-width:18}.gate-ribbon-wine{stroke-width:16}.gate-ribbon-carbon{stroke-width:10}.gate-ribbon-glint{stroke-width:1}
+ .gate-aura{width:min(96vw,62vh)}
+ .crystal-trigger{width:min(83vw,58vh);transform:translate3d(calc(var(--gx,0)*-5px),calc(var(--gy,0)*-4px),0)}
+ .gate-caption{bottom:clamp(90px,15vh,132px)}
+ .gate-eyebrow{gap:7px;font-size:7px;letter-spacing:.2em}
+ .gate-title{font-size:clamp(23px,7.3vw,30px);margin-top:12px}
+ .gate-prompt{bottom:24px;gap:6px}.gate-prompt-main{font-size:7px;letter-spacing:.23em}.gate-prompt-sub{font-size:8px}
+}
+@media(max-height:650px) and (min-width:701px){.crystal-trigger{width:min(52vw,58vh,500px)}.gate-caption{bottom:88px}.gate-prompt{bottom:19px}.gate-header{top:15px}}
+@media(prefers-reduced-motion:reduce){.flow-gateway,.flow-gateway *{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.flow-gateway.is-awake .gate-ribbon-run{stroke-dashoffset:50}}
+
 </style>
 </head>
-<body>
+<body class="gateway-open">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <div class="progress" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+<noscript><style>.flow-gateway{display:none!important}body.gateway-open{overflow:auto}</style></noscript>
+<section class="flow-gateway" id="flow-gateway" aria-label="Entrada interativa PDSF Flow">
+  <div class="gate-vignette" aria-hidden="true"></div>
+  <div class="gate-grain" aria-hidden="true"></div>
+  <header class="gate-header">
+    <a class="gate-brand" href="#inicio" aria-label="PDSF Consultoria">
+      <img src="pdsf-logo.png" alt="PDSF Consultoria — Estratégia, Soluções, Resultados">
+    </a>
+    <a class="gate-enter" id="gate-enter" href="#inicio">Entrar no site <span aria-hidden="true">↗</span></a>
+    <button class="gate-sound" id="gateway-sound-toggle" type="button" aria-pressed="false" aria-label="Ativar sons de interação">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 8v4h3l4 3V5L6 8H3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M13 7a4 4 0 0 1 0 6m2-8a7 7 0 0 1 0 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <span id="gateway-sound-label">Som · off</span>
+    </button>
+  </header>
+  <div class="gate-stage">
+    <svg class="gate-ribbon" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="gateWine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32080E"/><stop offset=".42" stop-color="#5B111A"/><stop offset=".66" stop-color="#A24551"/><stop offset="1" stop-color="#32080E"/></linearGradient>
+        <linearGradient id="gateSilver" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#777570"/><stop offset=".48" stop-color="#F4F2EE"/><stop offset="1" stop-color="#777570"/></linearGradient>
+      </defs>
+      <path class="gate-ribbon-silver" d="M-180 760 C160 530 300 250 610 360 S1020 830 1280 600 S1490 290 1800 180"/>
+      <path class="gate-ribbon-wine" d="M-180 760 C160 530 300 250 610 360 S1020 830 1280 600 S1490 290 1800 180"/>
+      <path class="gate-ribbon-carbon" d="M-180 760 C160 530 300 250 610 360 S1020 830 1280 600 S1490 290 1800 180"/>
+      <path class="gate-ribbon-glint" d="M-180 760 C160 530 300 250 610 360 S1020 830 1280 600 S1490 290 1800 180"/>
+      <path class="gate-ribbon-run" pathLength="100" d="M-180 760 C160 530 300 250 610 360 S1020 830 1280 600 S1490 290 1800 180"/>
+    </svg>
+    <div class="gate-aura"></div>
+    <button class="crystal-trigger" id="crystal-trigger" type="button" aria-label="Toque e segure para despertar o PDSF Flow" aria-pressed="false">
+      <svg class="crystal-art" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="gemBody" x1=".12" y1=".02" x2=".88" y2="1"><stop stop-color="#b8b6b1" stop-opacity=".7"/><stop offset=".23" stop-color="#5b111a"/><stop offset=".68" stop-color="#23070b"/><stop offset="1" stop-color="#090a0b"/></linearGradient>
+          <linearGradient id="gemSilver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f2ee" stop-opacity=".9"/><stop offset="1" stop-color="#777570" stop-opacity=".1"/></linearGradient>
+          <linearGradient id="gemWine" x1="0" y1="0" x2="1" y2=".7"><stop stop-color="#32080e"/><stop offset=".52" stop-color="#8e2835"/><stop offset="1" stop-color="#5b111a"/></linearGradient>
+          <filter id="gemBlur"><feGaussianBlur stdDeviation="18"/></filter>
+        </defs>
+        <ellipse class="gem-shadow" cx="300" cy="326" rx="206" ry="214" filter="url(#gemBlur)"/>
+        <g class="gem-solid">
+          <path class="gem-outline" d="M300 42 448 102 538 248 474 454 300 554 126 454 62 248 152 102Z" fill="url(#gemBody)"/>
+          <path class="gem-facet gem-facet-light" d="M300 42 300 250 152 102Z"/>
+          <path class="gem-facet gem-facet-wine" d="M300 42 448 102 300 250Z"/>
+          <path class="gem-facet gem-facet-dark" d="M152 102 300 250 62 248Z"/>
+          <path class="gem-facet gem-facet-light" d="M448 102 538 248 300 250Z"/>
+          <path class="gem-facet gem-facet-wine" d="M62 248 300 250 126 454Z"/>
+          <path class="gem-facet gem-facet-dark" d="M300 250 538 248 474 454Z"/>
+          <path class="gem-facet gem-facet-light" d="M126 454 300 250 300 554Z"/>
+          <path class="gem-facet gem-facet-wine" d="M300 250 474 454 300 554Z"/>
+          <path class="gem-vein" d="M300 42V554M62 248h476M152 102 474 454M448 102 126 454"/>
+          <path class="gem-flow-under" d="M170 338C226 266 244 398 310 334S393 294 432 343"/>
+          <path class="gem-flow" d="M170 338C226 266 244 398 310 334S393 294 432 343"/>
+          <path class="gem-contour" d="M300 42 448 102 538 248 474 454 300 554 126 454 62 248 152 102Z"/>
+        </g>
+      </svg>
+      <svg class="gate-hold-ring" viewBox="0 0 100 100" aria-hidden="true"><circle pathLength="100" cx="50" cy="50" r="48"/></svg>
+      <span class="sr-only">Cristal PDSF Flow. Segure para iniciar a animação.</span>
+    </button>
+  </div>
+  <div class="gate-caption">
+    <div class="gate-eyebrow">Estratégia <span>·</span> Soluções <span>·</span> Resultados</div>
+    <p class="gate-title" id="gate-title">Decisões em movimento.</p>
+  </div>
+  <div class="gate-prompt" id="gate-prompt"><span class="gate-prompt-main">Toque e segure</span><span class="gate-prompt-sub">para despertar o PDSF Flow</span></div>
+  <span class="sr-only" id="gate-announcement" aria-live="polite"></span>
+</section>
 <header class="topbar">
   <a class="brand" href="#inicio" aria-label="PDSF Consultoria — início"><img src="pdsf-logo.png" alt="PDSF Consultoria — Estratégia, Soluções, Resultados"></a>
   <nav class="nav" id="main-nav" aria-label="Navegação principal">
@@ -197,9 +332,9 @@ section{position:relative;scroll-margin-top:76px}
     </svg>
     <div class="hero-copy">
       <div class="eyebrow">Estratégia <span>·</span> Soluções <span>·</span> Resultados</div>
-      <h1 id="hero-title">Estratégia que transforma decisões em <em>resultados.</em></h1>
+      <h1 id="hero-title" tabindex="-1">Estratégia que transforma decisões em <em>resultados.</em></h1>
       <p>Todo negócio está em movimento. A PDSF encontra direção, estrutura e ritmo para transformar escolhas em avanço.</p>
-      <div class="hero-actions"><a class="button" href="#fluxo">Acompanhe o fluxo <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-quiet" href="contato.html">Inicie uma conversa <span class="arrow" aria-hidden="true">↗</span></a><button class="flow-trigger" id="flow-trigger" type="button" aria-label="Segure para ativar o PDSF Flow" aria-pressed="false"><span class="crystal-wrap"><svg class="crystal-svg" viewBox="0 0 80 86" aria-hidden="true"><path class="crystal-facet" d="M40 4 72 34 40 82 8 34Z" fill="#5B111A"/><path class="crystal-facet" d="M40 4 52 34 40 82 28 34Z" fill="#32080E"/><path class="crystal-facet" d="M8 34h64M28 34l12-30 12 30" fill="none"/><path class="crystal-core" d="M24 56c8-18 17 18 31-4"/></svg><svg class="crystal-progress" viewBox="0 0 100 100" aria-hidden="true"><circle pathLength="100" cx="50" cy="50" r="45"/></svg></span><span class="trigger-copy">Segure para ativar<strong>o PDSF Flow</strong></span></button></div><a class="flow-enter" id="flow-enter" href="#solucoes" hidden>Ver todas as soluções <span aria-hidden="true">→</span></a><span class="sr-only" id="flow-announcement" aria-live="polite"></span>
+      <div class="hero-actions"><a class="button" href="#fluxo">Acompanhe o fluxo <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-quiet" href="contato.html">Inicie uma conversa <span class="arrow" aria-hidden="true">↗</span></a></div>
     </div>
     <div class="hero-meta"><span>Um movimento contínuo<br>de decisão a resultado</span><span class="scroll-hint">Role para explorar <i aria-hidden="true"></i></span><span class="hero-code">01 / 04</span></div>
   </section>
@@ -360,13 +495,16 @@ section{position:relative;scroll-margin-top:76px}
 
   const soundToggle=document.getElementById('sound-toggle');
   const soundLabel=document.getElementById('sound-label');
+  const gatewaySoundToggle=document.getElementById('gateway-sound-toggle');
+  const gatewaySoundLabel=document.getElementById('gateway-sound-label');
+  const soundButtons=[soundToggle,gatewaySoundToggle].filter(Boolean);
   const AudioContextClass=window.AudioContext||window.webkitAudioContext;
   let audioContext=null;
   let audioEnabled=false;
   if(!AudioContextClass){
-    soundToggle.disabled=true;
+    soundButtons.forEach(button=>{button.disabled=true;button.setAttribute('aria-label','Som indisponível neste navegador')});
     soundLabel.textContent='Som indisponível';
-    soundToggle.setAttribute('aria-label','Som indisponível neste navegador');
+    if(gatewaySoundLabel)gatewaySoundLabel.textContent='Som indisponível';
   }
   function playCue(frequency){
     if(!audioEnabled||!audioContext)return;
@@ -386,75 +524,107 @@ section{position:relative;scroll-margin-top:76px}
       oscillator.onended=()=>{oscillator.disconnect();envelope.disconnect()};
     });
   }
-  const flowTrigger=document.getElementById('flow-trigger');
-  const flowInstruction=flowTrigger.querySelector('.trigger-copy');
-  const flowAnnouncement=document.getElementById('flow-announcement');
-  const flowEnter=document.getElementById('flow-enter');
-  const heroSection=document.querySelector('.hero');
+  const gateway=document.getElementById('flow-gateway');
+  const crystal=document.getElementById('crystal-trigger');
+  const gatePrompt=document.getElementById('gate-prompt');
+  const gateAnnouncement=document.getElementById('gate-announcement');
+  const gateEnter=document.getElementById('gate-enter');
+  const gateRegions=[document.querySelector('.topbar'),document.getElementById('conteudo'),document.querySelector('.footer')];
+  let gatewayEntered=false;
+  try{gatewayEntered=sessionStorage.getItem('pdsf-site-entered')==='1'}catch{}
+  if(gatewayEntered){
+    gateway.hidden=true;
+    document.body.classList.remove('gateway-open');
+  }else{
+    gateRegions.forEach(region=>{if(region){region.inert=true;region.setAttribute('aria-hidden','true')}});
+  }
+
   let holdTimer=null;
   let holding=false;
-  let flowActivated=false;
-  function activateFlow(){
-    if(flowActivated)return;
+  let flowAwake=false;
+  function awakenFlow(){
+    if(flowAwake)return;
     clearTimeout(holdTimer);
     holding=false;
-    flowActivated=true;
-    flowTrigger.classList.remove('is-holding');
-    flowTrigger.classList.add('is-activated');
-    flowTrigger.setAttribute('aria-pressed','true');
-    flowTrigger.setAttribute('aria-label','PDSF Flow ativado');
-    flowInstruction.innerHTML='Fluxo ativado<strong>Explore a PDSF</strong>';
-    heroSection.classList.add('flow-awake');
-    flowAnnouncement.textContent='O PDSF Flow está ativo. Agora você pode explorar todas as soluções.';
+    flowAwake=true;
+    crystal.classList.remove('is-holding');
+    crystal.setAttribute('aria-pressed','true');
+    crystal.setAttribute('aria-label','PDSF Flow despertado. Explore a cena ou entre no site.');
+    gateway.classList.add('is-awake');
+    gatePrompt.innerHTML='<span class="gate-prompt-main">O fluxo está desperto</span><span class="gate-prompt-sub">Entre para explorar as soluções PDSF</span>';
+    gateAnnouncement.textContent='O cristal despertou o PDSF Flow. Use Entrar no site para conhecer a PDSF.';
     playCue(174.61);
-    window.setTimeout(()=>{
-      flowEnter.hidden=false;
-      requestAnimationFrame(()=>flowEnter.classList.add('is-visible'));
-    },reduced?0:950);
   }
   function beginHold(event){
-    if(flowActivated||holding)return;
+    if(flowAwake||holding)return;
     if(event.type==='pointerdown'&&event.pointerType==='mouse'&&event.button!==0)return;
     holding=true;
-    flowTrigger.classList.add('is-holding');
-    flowAnnouncement.textContent='Continue segurando para ativar o fluxo.';
-    if(event.pointerId!==undefined&&flowTrigger.setPointerCapture){
-      try{flowTrigger.setPointerCapture(event.pointerId)}catch{}
-    }
-    holdTimer=window.setTimeout(activateFlow,reduced?280:760);
+    crystal.classList.add('is-holding');
+    gateAnnouncement.textContent='Continue segurando para despertar o fluxo.';
+    if(event.pointerId!==undefined&&crystal.setPointerCapture){try{crystal.setPointerCapture(event.pointerId)}catch{}}
+    holdTimer=window.setTimeout(awakenFlow,reduced?280:1350);
   }
   function endHold(){
     if(!holding)return;
     clearTimeout(holdTimer);
     holding=false;
-    flowTrigger.classList.remove('is-holding');
-    flowAnnouncement.textContent='Ainda não ativado. Segure o cristal por um instante para iniciar.';
+    crystal.classList.remove('is-holding');
+    gateAnnouncement.textContent='Segure o cristal por mais tempo para despertar o PDSF Flow.';
   }
-  flowTrigger.addEventListener('pointerdown',beginHold);
-  flowTrigger.addEventListener('pointerup',endHold);
-  flowTrigger.addEventListener('pointercancel',endHold);
-  flowTrigger.addEventListener('lostpointercapture',endHold);
-  flowTrigger.addEventListener('click',event=>{
-    if(event.detail===0)activateFlow();
-  });
+  crystal.addEventListener('pointerdown',beginHold);
+  crystal.addEventListener('pointerup',endHold);
+  crystal.addEventListener('pointercancel',endHold);
+  crystal.addEventListener('lostpointercapture',endHold);
+  crystal.addEventListener('click',event=>{if(event.detail===0)awakenFlow()});
 
-  soundToggle.addEventListener('click',async()=>{
-    if(!AudioContextClass)return;
+  function enterSite(event){
+    event?.preventDefault();
+    if(gateway.hidden)return;
+    gateway.classList.add('is-leaving');
+    document.body.classList.remove('gateway-open');
+    gateRegions.forEach(region=>{if(region){region.inert=false;region.removeAttribute('aria-hidden')}});
+    try{sessionStorage.setItem('pdsf-site-entered','1')}catch{}
+    playCue(329.63);
+    window.setTimeout(()=>{
+      gateway.hidden=true;
+      document.getElementById('hero-title').focus({preventScroll:true});
+    },reduced?0:850);
+  }
+  gateEnter.addEventListener('click',enterSite);
+
+  function syncSoundControls(){
+    const text=audioEnabled?'Som · on':'Som · off';
+    soundButtons.forEach(button=>{
+      button.setAttribute('aria-pressed',String(audioEnabled));
+      button.setAttribute('aria-label',audioEnabled?'Desativar sons de interação':'Ativar sons de interação');
+    });
+    if(soundLabel)soundLabel.textContent=text;
+    if(gatewaySoundLabel)gatewaySoundLabel.textContent=text;
+  }
+  if(AudioContextClass)soundButtons.forEach(button=>button.addEventListener('click',async()=>{
     if(!audioContext)audioContext=new AudioContextClass();
-    if(audioEnabled){
-      audioEnabled=false;
-      soundToggle.setAttribute('aria-pressed','false');
-      soundToggle.setAttribute('aria-label','Ativar sons de interação');
-      soundLabel.textContent='Som · off';
-    }else{
-      try{await audioContext.resume()}catch{return}
-      audioEnabled=true;
-      soundToggle.setAttribute('aria-pressed','true');
-      soundToggle.setAttribute('aria-label','Desativar sons de interação');
-      soundLabel.textContent='Som · on';
-      playCue(220);
-    }
-  });
+    if(audioEnabled){audioEnabled=false;syncSoundControls()}
+    else{try{await audioContext.resume()}catch{return}audioEnabled=true;syncSoundControls();playCue(220)}
+  }));
+
+  const pointerArea=document.querySelector('.flow-gateway');
+  if(!reduced&&pointerArea){
+    let pointerPending=false;
+    pointerArea.addEventListener('pointermove',event=>{
+      if(pointerPending)return;
+      pointerPending=true;
+      requestAnimationFrame(()=>{
+        const box=pointerArea.getBoundingClientRect();
+        document.documentElement.style.setProperty('--gx',((event.clientX-box.left)/box.width-.5).toFixed(2));
+        document.documentElement.style.setProperty('--gy',((event.clientY-box.top)/box.height-.5).toFixed(2));
+        pointerPending=false;
+      });
+    },{passive:true});
+    pointerArea.addEventListener('pointerleave',()=>{
+      document.documentElement.style.setProperty('--gx',0);
+      document.documentElement.style.setProperty('--gy',0);
+    },{passive:true});
+  }
   document.querySelectorAll('.button,.nav-cta').forEach(link=>{
     link.addEventListener('click',()=>playCue(329.63));
   });
