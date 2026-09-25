@@ -31,7 +31,7 @@ const VALID_DDDS = new Set([
 function normalizeBrazilPhone(value) {
   if (!value) return { valid: true, phone: null };
 
-  let digits = value.replace(/\\D/g, "");
+  let digits = value.replace(/\D/g, "");
   if (!digits) return { valid: false, phone: null };
   if (digits.startsWith("55") && (digits.length === 12 || digits.length === 13)) {
     digits = digits.slice(2);
@@ -44,10 +44,10 @@ function normalizeBrazilPhone(value) {
   const ddd = digits.slice(0, 2);
   const subscriber = digits.slice(2);
   if (!VALID_DDDS.has(ddd)) return { valid: false, phone: null };
-  if (digits.length === 10 && !/^[2-5]\\d{7}$/.test(subscriber)) {
+  if (digits.length === 10 && !/^[2-5]\d{7}$/.test(subscriber)) {
     return { valid: false, phone: null };
   }
-  if (digits.length === 11 && !/^9\\d{8}$/.test(subscriber)) {
+  if (digits.length === 11 && !/^9\d{8}$/.test(subscriber)) {
     return { valid: false, phone: null };
   }
 
