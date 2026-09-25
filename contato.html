@@ -49,7 +49,7 @@ function showFieldError(id,message){
 
 for(const id of fieldIds){
   const control=form.elements[id];
-  control.addEventListener(control.type==='checkbox'?'change':'input',()=>{
+  control.addEventListener(control.type==='checkbox'||control.tagName==='SELECT'?'change':'input',()=>{
     if(attemptedSubmit)showFieldError(id,fieldValidation(id));
   });
   if(id==='telefone')control.addEventListener('blur',()=>{
@@ -61,6 +61,8 @@ form.addEventListener('submit',async event=>{
   event.preventDefault();
   const button=document.getElementById('submit-button');
   const status=document.getElementById('form-status');
+  status.textContent='';
+  status.className='form-status';
   const data=Object.fromEntries(new FormData(form).entries());
   if(data.website){document.getElementById('thanks').style.display='block';form.style.display='none';return}
   delete data.website;
