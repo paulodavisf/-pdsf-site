@@ -9,6 +9,8 @@
 <style>
 :root{--wine:#5B111A;--deep:#32080E;--carbon:#17191B;--silver:#B8B6B1;--paper:#F4F2EE;--white:#fff;--ink:#17191B;--muted:#686866;--line:rgba(23,25,27,.16);--scroll:0;--px:0;--py:0}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 html{scroll-behavior:smooth;scroll-padding-top:82px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Montserrat,Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
@@ -51,7 +53,7 @@ section{position:relative;scroll-margin-top:76px}
 .hero-actions{display:flex;align-items:center;gap:24px;margin-top:32px}
 .button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:0 21px;border:1px solid var(--wine);border-radius:28px;background:var(--wine);color:#fff;font-size:9px;letter-spacing:.16em;text-transform:uppercase;transition:transform .25s,background .25s,border-color .25s}
 .button:hover,.button:focus-visible{transform:translateY(-2px);background:var(--deep);border-color:var(--deep)}
-.button-quiet{background:transparent;border-color:rgba(244,242,238,.38);color:var(--paper)}.button-quiet:hover{background:var(--paper);border-color:var(--paper);color:var(--carbon)}
+.button-quiet{background:transparent;border-color:rgba(244,242,238,.38);color:var(--paper)}.button-quiet:hover{background:var(--paper);border-color:var(--paper);color:var(--carbon)}.flow-trigger{min-height:60px;display:inline-flex;align-items:center;gap:11px;padding:4px 7px 4px 2px;border:0;background:transparent;color:var(--paper);text-align:left;cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent}.crystal-wrap{position:relative;width:48px;height:48px;display:grid;place-items:center;flex:0 0 48px}.crystal-svg{width:42px;height:46px;overflow:visible;transition:transform .35s ease,filter .35s ease}.crystal-facet{stroke:rgba(244,242,238,.68);stroke-width:.7;transition:fill .35s,opacity .35s}.crystal-core{fill:none;stroke:var(--paper);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .5s ease}.crystal-progress{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}.crystal-progress circle{fill:none;stroke:#c7858d;stroke-width:1.5;stroke-dasharray:100;stroke-dashoffset:100}.flow-trigger.is-holding .crystal-progress circle{animation:hold-fill .76s linear forwards}@keyframes hold-fill{to{stroke-dashoffset:0}}.flow-trigger:hover .crystal-svg,.flow-trigger:focus-visible .crystal-svg{transform:translateY(-2px) scale(1.06);filter:drop-shadow(0 0 9px rgba(184,182,177,.3))}.trigger-copy{font-size:8px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:#d2cfcb}.trigger-copy strong{display:block;color:#fff;font-weight:500}.flow-trigger.is-activated .crystal-svg{animation:crystal-awaken .75s cubic-bezier(.2,.7,.2,1) both}.flow-trigger.is-activated .crystal-facet{fill:#8b3540;opacity:.95}.flow-trigger.is-activated .crystal-core{stroke-dashoffset:0}@keyframes crystal-awaken{45%{transform:scale(1.3) rotate(8deg);filter:drop-shadow(0 0 20px rgba(184,182,177,.72))}100%{transform:scale(1.08);filter:drop-shadow(0 0 8px rgba(184,182,177,.3))}}.hero.flow-awake .hero-art .ribbon-glint{stroke-dasharray:6 58;animation:glide .78s linear 2}.hero.flow-awake .hero-art .ribbon-wine{filter:drop-shadow(0 0 12px rgba(138,38,51,.72))}.hero.flow-awake .hero h1 em{animation:word-glow 1.2s ease-out}@keyframes word-glow{45%{color:#f1d9dc;text-shadow:0 0 28px rgba(200,133,141,.55)}}.flow-enter{display:inline-flex;align-items:center;gap:18px;margin:12px 0 0 4px;color:#fff;text-transform:uppercase;font-size:9px;letter-spacing:.17em;border-bottom:1px solid rgba(244,242,238,.48);padding:0 0 9px;opacity:0;transform:translateY(8px);transition:opacity .55s ease,transform .55s ease,color .2s}.flow-enter.is-visible{opacity:1;transform:none}.flow-enter:hover{color:#ddb6bb}.flow-enter span{font-size:16px}
 .arrow{font-size:16px;line-height:1}
 .hero-meta{position:absolute;left:clamp(24px,8vw,126px);right:clamp(50px,9vw,150px);bottom:27px;z-index:3;display:flex;justify-content:space-between;align-items:end;color:#d2d0cc;font-size:8px;line-height:1.8;letter-spacing:.16em;text-transform:uppercase}
 .hero-meta .scroll-hint{display:flex;align-items:center;gap:10px}.scroll-hint i{display:block;width:1px;height:28px;background:linear-gradient(var(--silver),transparent);animation:scroll-pulse 1.8s ease-in-out infinite}@keyframes scroll-pulse{50%{transform:scaleY(.55);transform-origin:top;opacity:.4}}
@@ -140,7 +142,7 @@ section{position:relative;scroll-margin-top:76px}
  .hero .eyebrow{font-size:7px;letter-spacing:.19em;gap:8px;margin-bottom:23px}.hero .eyebrow:before{width:20px}
  .hero h1{font-size:clamp(48px,12.7vw,73px);line-height:.99;max-width:560px;margin-bottom:18px}
  .hero-copy>p{font-size:13px;line-height:1.7;max-width:340px}
- .hero-actions{gap:10px;margin-top:23px;align-items:flex-start;flex-direction:column}.button{min-height:44px;padding:0 17px;font-size:8px}.button-quiet{border:0;padding-left:4px;min-height:34px}
+ .hero-actions{gap:10px;margin-top:23px;align-items:flex-start;flex-direction:column}.button{min-height:44px;padding:0 17px;font-size:8px}.button-quiet{border:0;padding-left:4px;min-height:34px}.flow-trigger{min-height:52px;margin-top:2px}.crystal-wrap{width:42px;height:42px;flex-basis:42px}.crystal-svg{width:36px;height:40px}.trigger-copy{font-size:7px}.flow-enter{font-size:8px;margin-top:8px}
  .hero-meta{left:22px;right:27px;bottom:22px;font-size:7px}.hero-meta .scroll-hint{gap:7px}.hero-code{font-size:10px}
  .manifesto{padding:86px 22px 66px}.manifesto-art{opacity:.22}.manifesto-art .ribbon-silver{stroke-width:50}.manifesto-art .ribbon-wine{stroke-width:42}.manifesto-art .ribbon-core{stroke-width:26}
  .manifesto h2{font-size:clamp(42px,11.2vw,65px);margin:21px 0 19px}.manifesto-copy{font-size:13px;line-height:1.75}
@@ -154,7 +156,7 @@ section{position:relative;scroll-margin-top:76px}
 }
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
- .reveal{opacity:1;transform:none}.hero-photo{transform:none}.hero-art{transform:none}
+ .reveal{opacity:1;transform:none}.hero-photo{transform:none}.hero-art{transform:none}.flow-trigger.is-holding .crystal-progress circle{animation:none;stroke-dashoffset:0}.flow-trigger.is-activated .crystal-svg{animation:none}.flow-enter{opacity:1;transform:none}
 }
 </style>
 </head>
@@ -197,7 +199,7 @@ section{position:relative;scroll-margin-top:76px}
       <div class="eyebrow">Estratégia <span>·</span> Soluções <span>·</span> Resultados</div>
       <h1 id="hero-title">Estratégia que transforma decisões em <em>resultados.</em></h1>
       <p>Todo negócio está em movimento. A PDSF encontra direção, estrutura e ritmo para transformar escolhas em avanço.</p>
-      <div class="hero-actions"><a class="button" href="#fluxo">Acompanhe o fluxo <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-quiet" href="contato.html">Inicie uma conversa <span class="arrow" aria-hidden="true">↗</span></a></div>
+      <div class="hero-actions"><a class="button" href="#fluxo">Acompanhe o fluxo <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-quiet" href="contato.html">Inicie uma conversa <span class="arrow" aria-hidden="true">↗</span></a><button class="flow-trigger" id="flow-trigger" type="button" aria-label="Segure para ativar o PDSF Flow" aria-pressed="false"><span class="crystal-wrap"><svg class="crystal-svg" viewBox="0 0 80 86" aria-hidden="true"><path class="crystal-facet" d="M40 4 72 34 40 82 8 34Z" fill="#5B111A"/><path class="crystal-facet" d="M40 4 52 34 40 82 28 34Z" fill="#32080E"/><path class="crystal-facet" d="M8 34h64M28 34l12-30 12 30" fill="none"/><path class="crystal-core" d="M24 56c8-18 17 18 31-4"/></svg><svg class="crystal-progress" viewBox="0 0 100 100" aria-hidden="true"><circle pathLength="100" cx="50" cy="50" r="45"/></svg></span><span class="trigger-copy">Segure para ativar<strong>o PDSF Flow</strong></span></button></div><a class="flow-enter" id="flow-enter" href="#solucoes" hidden>Ver todas as soluções <span aria-hidden="true">→</span></a><span class="sr-only" id="flow-announcement" aria-live="polite"></span>
     </div>
     <div class="hero-meta"><span>Um movimento contínuo<br>de decisão a resultado</span><span class="scroll-hint">Role para explorar <i aria-hidden="true"></i></span><span class="hero-code">01 / 04</span></div>
   </section>
@@ -384,6 +386,58 @@ section{position:relative;scroll-margin-top:76px}
       oscillator.onended=()=>{oscillator.disconnect();envelope.disconnect()};
     });
   }
+  const flowTrigger=document.getElementById('flow-trigger');
+  const flowInstruction=flowTrigger.querySelector('.trigger-copy');
+  const flowAnnouncement=document.getElementById('flow-announcement');
+  const flowEnter=document.getElementById('flow-enter');
+  const heroSection=document.querySelector('.hero');
+  let holdTimer=null;
+  let holding=false;
+  let flowActivated=false;
+  function activateFlow(){
+    if(flowActivated)return;
+    clearTimeout(holdTimer);
+    holding=false;
+    flowActivated=true;
+    flowTrigger.classList.remove('is-holding');
+    flowTrigger.classList.add('is-activated');
+    flowTrigger.setAttribute('aria-pressed','true');
+    flowTrigger.setAttribute('aria-label','PDSF Flow ativado');
+    flowInstruction.innerHTML='Fluxo ativado<strong>Explore a PDSF</strong>';
+    heroSection.classList.add('flow-awake');
+    flowAnnouncement.textContent='O PDSF Flow está ativo. Agora você pode explorar todas as soluções.';
+    playCue(174.61);
+    window.setTimeout(()=>{
+      flowEnter.hidden=false;
+      requestAnimationFrame(()=>flowEnter.classList.add('is-visible'));
+    },reduced?0:950);
+  }
+  function beginHold(event){
+    if(flowActivated||holding)return;
+    if(event.type==='pointerdown'&&event.pointerType==='mouse'&&event.button!==0)return;
+    holding=true;
+    flowTrigger.classList.add('is-holding');
+    flowAnnouncement.textContent='Continue segurando para ativar o fluxo.';
+    if(event.pointerId!==undefined&&flowTrigger.setPointerCapture){
+      try{flowTrigger.setPointerCapture(event.pointerId)}catch{}
+    }
+    holdTimer=window.setTimeout(activateFlow,reduced?280:760);
+  }
+  function endHold(){
+    if(!holding)return;
+    clearTimeout(holdTimer);
+    holding=false;
+    flowTrigger.classList.remove('is-holding');
+    flowAnnouncement.textContent='Ainda não ativado. Segure o cristal por um instante para iniciar.';
+  }
+  flowTrigger.addEventListener('pointerdown',beginHold);
+  flowTrigger.addEventListener('pointerup',endHold);
+  flowTrigger.addEventListener('pointercancel',endHold);
+  flowTrigger.addEventListener('lostpointercapture',endHold);
+  flowTrigger.addEventListener('click',event=>{
+    if(event.detail===0)activateFlow();
+  });
+
   soundToggle.addEventListener('click',async()=>{
     if(!AudioContextClass)return;
     if(!audioContext)audioContext=new AudioContextClass();
