@@ -62,8 +62,9 @@ module.exports = async function contact(req, res) {
   }
 
   const supabaseUrl = process.env.SUPABASE_URL;
-  const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
-  if (!supabaseUrl || !supabaseAnonKey) {
+  const supabasePublishableKey =
+    process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
+  if (!supabaseUrl || !supabasePublishableKey) {
     return send(res, 503, { error: "Contato ainda não configurado." });
   }
 
@@ -73,8 +74,7 @@ module.exports = async function contact(req, res) {
       {
         method: "POST",
         headers: {
-          apikey: supabaseAnonKey,
-          Authorization: `Bearer ${supabaseAnonKey}`,
+          apikey: supabasePublishableKey,
           "Content-Type": "application/json",
           Prefer: "return=minimal",
         },
