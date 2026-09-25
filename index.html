@@ -1,25 +1,410 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#F4F2EE"><meta name="description" content="PDSF Consultoria — Estratégia que transforma decisões em resultados.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17191B">
+<meta name="description" content="PDSF Consultoria — Estratégia que transforma decisões em resultados.">
 <title>PDSF Consultoria — Estratégia · Soluções · Resultados</title>
 <style>
-:root{--wine:#5B111A;--deep:#32080E;--carbon:#17191B;--silver:#B8B6B1;--paper:#F4F2EE;--ink:#17191B;--muted:#686866;--line:rgba(23,25,27,.15);--scroll:0;--mx:0;--my:0}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Montserrat,Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.grain{position:fixed;inset:0;pointer-events:none;z-index:10;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E")}.progress{position:fixed;z-index:20;top:0;left:0;height:2px;width:calc(var(--scroll)*1%);background:var(--wine)}.topbar{height:82px;position:absolute;z-index:8;top:0;left:0;right:0;padding:0 clamp(22px,6vw,92px);display:flex;align-items:center;justify-content:space-between;background:rgba(244,242,238,.94);border-bottom:1px solid rgba(23,25,27,.07);backdrop-filter:blur(14px)}.brand{display:block;width:198px;line-height:0}.brand img{width:100%;height:auto;display:block;mix-blend-mode:multiply}.nav{display:flex;align-items:center;gap:clamp(18px,3vw,48px)}.nav a{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#3c3c3b;transition:color .2s}.nav a:hover{color:var(--wine)}.nav .nav-cta{color:#fff;background:var(--wine);padding:15px 22px;border-radius:28px;border:1px solid var(--wine);transition:background .25s,transform .25s}.nav .nav-cta:hover{background:var(--deep);transform:translateY(-2px)}.menu-toggle{display:none}.hero{min-height:min(860px,100svh);height:max(700px,100svh);max-height:980px;position:relative;overflow:hidden;padding:155px clamp(24px,6vw,92px) 95px;display:flex;align-items:center;background:var(--paper)}.hero-photo{position:absolute;inset:0 0 0 31%;background-image:linear-gradient(90deg,var(--paper) 0%,rgba(244,242,238,.88) 9%,rgba(244,242,238,.18) 32%,transparent 54%),url('pdsf-hero.jpg');background-position:center,right center;background-size:cover;transform:scale(1.025) translate3d(calc(var(--mx)*-8px),calc(var(--my)*-5px),0);will-change:transform}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(23,25,27,.24),transparent 24%);pointer-events:none}.hero-copy{z-index:3;position:relative;max-width:600px;transform:translateY(calc(var(--scroll)*-.025px))}.eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;display:flex;align-items:center;gap:13px}.eyebrow:before{content:"";width:34px;height:1px;background:var(--wine)}.hero .eyebrow{margin-bottom:32px}.hero h1{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(52px,6.3vw,93px);line-height:.98;letter-spacing:-.055em;font-weight:400;margin:0 0 22px;max-width:690px}.hero h1 em{font-style:normal;color:var(--wine)}.hero-copy>p{font-size:clamp(15px,1.35vw,19px);line-height:1.65;color:#4a4a48;max-width:445px;margin:0}.actions{display:flex;align-items:center;gap:18px;margin-top:31px}.button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:0 23px;border:1px solid var(--wine);border-radius:30px;background:var(--wine);color:white;font-size:10px;letter-spacing:.15em;text-transform:uppercase;transition:transform .25s,background .25s}.button:hover{transform:translateY(-3px);background:var(--deep)}.button-light{background:transparent;color:var(--ink);border-color:rgba(23,25,27,.28)}.button-light:hover{background:var(--ink);color:white}.arrow{font-size:16px}.hero-list{position:absolute;z-index:4;bottom:36px;left:clamp(24px,6vw,92px);border-left:1px solid var(--wine);padding-left:14px;font-size:9px;line-height:1.9;letter-spacing:.19em;text-transform:uppercase;color:#434341}.hero-scroll{position:absolute;z-index:4;bottom:29px;right:clamp(24px,6vw,92px);display:flex;gap:10px;align-items:center;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:#fff;text-shadow:0 1px 4px #333}.hero-scroll:after{content:"";height:32px;width:1px;background:#fff}
-.page-flow{position:fixed;z-index:7;top:96px;right:clamp(12px,2vw,30px);bottom:22px;width:48px;height:calc(100vh - 118px);pointer-events:none;opacity:.78}.page-flow path{fill:none;stroke-linecap:round;stroke-linejoin:round}.page-flow .flow-edge{stroke:var(--wine);stroke-width:22;opacity:.98}.page-flow .flow-core{stroke:var(--carbon);stroke-width:16}.page-flow .flow-glint{stroke:var(--silver);stroke-width:3;opacity:1;stroke-dasharray:10 90;stroke-dashoffset:calc(100 - var(--scroll));transition:stroke-dashoffset .16s linear;filter:drop-shadow(0 0 3px rgba(244,242,238,.85))}.flow-statement{position:relative;z-index:5;background:linear-gradient(105deg,#32080E,#5B111A 50%,#32080E);color:white;padding:23px clamp(24px,6vw,92px);display:grid;grid-template-columns:repeat(3,1fr);gap:0}.pillar{display:flex;align-items:center;gap:20px;padding:8px clamp(14px,3vw,40px);border-right:1px solid rgba(255,255,255,.28)}.pillar:first-child{padding-left:0}.pillar:last-child{border:0}.pillar-num{font-family:Georgia,serif;font-size:36px;color:rgba(255,255,255,.75)}.pillar-title{font-size:11px;letter-spacing:.22em;text-transform:uppercase}.pillar p{font-size:12px;line-height:1.4;color:rgba(255,255,255,.77);margin:5px 0 0}
-section{position:relative}.section-wrap{padding:clamp(86px,10vw,150px) clamp(24px,8vw,120px)}.solutions{background:var(--paper)}.section-heading{display:grid;grid-template-columns:1fr .75fr;gap:7vw;align-items:end;margin-bottom:48px}.section-heading h2,.about h2,.method h2,.contact-cta h2{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.05em;font-weight:400;margin:18px 0 0}.section-heading p{font-size:15px;line-height:1.65;color:var(--muted);max-width:420px;margin:0 0 5px}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{position:relative;min-height:300px;padding:24px 23px 24px;border:1px solid rgba(23,25,27,.12);background:rgba(255,255,255,.46);display:flex;flex-direction:column;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}.service:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(23,25,27,.11);border-color:rgba(91,17,26,.3)}.service:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--wine),var(--silver),var(--carbon))}.service-top{display:flex;align-items:center;justify-content:space-between;color:#666;font-size:9px;letter-spacing:.16em;text-transform:uppercase}.service-icon{width:36px;height:36px;color:var(--wine);margin-top:23px}.service h3{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:24px;line-height:1.12;font-weight:400;letter-spacing:-.025em;margin:20px 0 11px}.service p{font-size:12px;line-height:1.6;color:#5b5b59;margin:0}.service a{font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-top:auto;padding-top:23px;color:var(--wine)}.service a span{font-size:15px;margin-left:8px}.service .mark{position:absolute;right:-30px;bottom:-45px;width:125px;height:125px;border:1px solid rgba(91,17,26,.1);border-radius:50%}.service .mark:after{content:"";position:absolute;inset:13px;border:1px solid rgba(91,17,26,.08);border-radius:50%}
-.method{background:var(--carbon);color:var(--paper);overflow:hidden}.method:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 100% 0%,rgba(91,17,26,.42),transparent 40%);pointer-events:none}.method .section-wrap{position:relative;z-index:1}.method-head{display:grid;grid-template-columns:1fr .8fr;gap:8vw;align-items:end;margin-bottom:72px}.method .eyebrow{color:#d4ccca}.method h2{margin-bottom:0}.method-head p{font-size:15px;line-height:1.7;color:#c3c1be;max-width:430px;margin:0}.steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative}.steps:before{content:"";position:absolute;left:0;right:0;top:27px;height:1px;background:rgba(244,242,238,.3)}.step{position:relative;padding-right:20px}.step:not(:first-child){padding-left:20px}.step-circle{position:relative;width:55px;height:55px;display:grid;place-items:center;background:var(--carbon);border:1px solid #d2c4c2;border-radius:50%;font-family:Georgia,serif;font-size:18px;color:#fff;margin-bottom:28px}.step h3{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:25px;font-weight:400;margin:0 0 11px}.step p{font-size:12px;line-height:1.65;color:#c1bfbc;max-width:220px;margin:0}.step:after{content:"›";position:absolute;top:10px;right:2px;color:#c38a8f;font-size:25px}.step:last-child:after{display:none}.about{background:#fff;padding:clamp(85px,10vw,140px) clamp(24px,8vw,120px);display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:center}.about h2{max-width:570px}.about p{font-size:16px;line-height:1.75;color:#555;margin:22px 0 0;max-width:560px}.values{display:grid;grid-template-columns:1fr 1fr;gap:25px 34px;border-left:1px solid var(--line);padding-left:40px}.value{display:flex;gap:14px}.value .tick{color:var(--wine);font-size:20px;line-height:1}.value strong{display:block;font-family:"Iowan Old Style",Baskerville,serif;font-size:20px;font-weight:400;margin-bottom:6px}.value span{color:#666;font-size:12px;line-height:1.5}
-.contact-cta{min-height:460px;position:relative;overflow:hidden;background:linear-gradient(105deg,var(--deep),var(--wine));color:white;display:flex;align-items:center;padding:80px clamp(24px,8vw,120px)}.contact-cta:after{content:"";position:absolute;inset:0 0 0 47%;background:linear-gradient(90deg,rgba(50,8,14,.98),rgba(50,8,14,.04) 70%),url('pdsf-hero.jpg') center 58%/cover;opacity:.72}.contact-cta .cta-inner{position:relative;z-index:2;max-width:650px}.contact-cta .eyebrow:before{background:#d49aa0}.contact-cta h2{font-size:clamp(48px,7vw,92px);margin:20px 0 14px}.contact-cta p{font-size:16px;line-height:1.65;color:#eee0df;max-width:420px;margin:0 0 26px}.contact-cta .button{background:var(--paper);border-color:var(--paper);color:var(--wine)}.contact-cta .button:hover{background:white}.footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px;padding:24px clamp(22px,6vw,92px);background:var(--paper);border-top:1px solid var(--line)}.footer .brand{width:155px}.footer-nav{display:flex;gap:24px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#444}.copyright{justify-self:end;text-align:right;font-size:9px;line-height:1.7;letter-spacing:.09em;color:#666}.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
-@media(max-width:900px){.brand{width:170px}.nav{gap:18px}.nav a{font-size:9px}.hero{height:90svh;min-height:670px;padding-top:135px}.hero-photo{inset:0 0 0 25%;background-position:center right}.hero h1{font-size:clamp(54px,8vw,76px);max-width:590px}.page-flow{right:12px;width:36px;opacity:.68}.page-flow .flow-edge{stroke-width:17}.page-flow .flow-core{stroke-width:12}.page-flow .flow-glint{stroke-width:1.6}.service-grid{grid-template-columns:repeat(2,1fr)}.service{min-height:255px}.footer{grid-template-columns:1fr 1fr}.footer-nav{display:none}}
-@media(max-width:620px){.topbar{height:70px;padding:0 18px}.brand{width:152px}.nav{gap:0}.nav>a:not(.nav-cta){display:none}.nav .nav-cta{padding:12px 15px;font-size:8px}.hero{height:88svh;min-height:660px;max-height:850px;padding:118px 23px 100px;align-items:flex-start}.hero-photo{inset:0;background-image:linear-gradient(90deg,rgba(244,242,238,.97) 0%,rgba(244,242,238,.84) 45%,rgba(244,242,238,.23) 100%),linear-gradient(0deg,rgba(23,25,27,.18),transparent 50%),url('pdsf-hero.jpg');background-position:center;background-size:cover}.hero-copy{margin-top:75px;max-width:470px}.hero .eyebrow{font-size:8px;letter-spacing:.2em;margin-bottom:22px}.hero h1{font-size:clamp(50px,13vw,76px);line-height:1.02;max-width:480px}.hero-copy>p{font-size:14px;max-width:355px}.actions{align-items:flex-start;flex-direction:column;gap:12px;margin-top:24px}.button{min-height:44px}.button-light{min-height:38px;border:0;padding:0 3px}.page-flow{right:5px;top:82px;bottom:16px;width:13px;height:calc(100vh - 98px);opacity:.58}.page-flow .flow-edge{stroke-width:8}.page-flow .flow-core{stroke-width:5.5}.page-flow .flow-glint{stroke-width:1.2;stroke-dasharray:8 92}.flow-statement{grid-template-columns:1fr;gap:0;padding:5px 22px}.pillar,.pillar:first-child{padding:15px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.23);gap:14px}.pillar:last-child{border:0}.pillar-num{font-size:26px;width:34px}.pillar-title{font-size:10px}.pillar p{font-size:11px}.section-wrap{padding:78px 22px}.section-heading,.method-head{display:block;margin-bottom:35px}.section-heading h2,.about h2,.method h2{font-size:clamp(42px,11vw,61px)}.section-heading p,.method-head p{font-size:13px;margin-top:18px}.service-grid{grid-template-columns:1fr;gap:10px}.service{min-height:225px;padding:21px}.service h3{font-size:24px;margin-top:17px}.service-icon{margin-top:15px}.service a{padding-top:16px}.method-head{margin-bottom:45px}.steps{grid-template-columns:1fr 1fr;gap:32px 16px}.steps:before{display:none}.step,.step:not(:first-child){padding:0}.step-circle{width:44px;height:44px;font-size:15px;margin-bottom:16px}.step h3{font-size:21px}.step p{font-size:11px}.step:after{display:none}.about{padding:78px 22px;grid-template-columns:1fr;gap:34px}.about p{font-size:14px}.values{padding-left:0;border-left:0;border-top:1px solid var(--line);padding-top:26px;gap:22px 14px}.value{gap:8px}.value strong{font-size:17px}.value span{font-size:10px}.contact-cta{min-height:420px;padding:70px 23px}.contact-cta:after{inset:0;background:linear-gradient(90deg,rgba(50,8,14,.92),rgba(50,8,14,.35)),url('pdsf-hero.jpg') center/cover;opacity:.8}.contact-cta h2{font-size:clamp(48px,12vw,70px)}.contact-cta p{font-size:14px}.footer{padding:19px 20px;grid-template-columns:1fr auto;gap:8px}.footer .brand{width:135px}.copyright{font-size:8px}.hero-list{left:23px;bottom:24px;font-size:8px}.hero-scroll{right:20px;bottom:22px;font-size:8px}.reveal{transform:translateY(14px)}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+:root{--wine:#5B111A;--deep:#32080E;--carbon:#17191B;--silver:#B8B6B1;--paper:#F4F2EE;--white:#fff;--ink:#17191B;--muted:#686866;--line:rgba(23,25,27,.16);--scroll:0;--px:0;--py:0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Montserrat,Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.skip-link{position:fixed;top:8px;left:8px;z-index:100;padding:12px 16px;background:var(--paper);color:var(--ink);transform:translateY(-160%)}.skip-link:focus{transform:none}
+.progress{position:fixed;z-index:40;top:0;left:0;height:2px;width:calc(var(--scroll)*1%);background:var(--wine);transform-origin:left}
+.grain{position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E")}
+.topbar{height:76px;position:fixed;z-index:35;top:0;left:0;right:0;padding:0 clamp(18px,5vw,78px);display:flex;align-items:center;justify-content:space-between;background:rgba(244,242,238,.94);border-bottom:1px solid rgba(23,25,27,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.brand{display:block;width:174px;line-height:0;flex:0 0 auto}.brand img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.nav{display:flex;align-items:center;gap:clamp(17px,2.4vw,38px)}.nav a{font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:#3c3b39;transition:color .2s}.nav a:hover,.nav a:focus-visible{color:var(--wine)}
+.header-tools{display:flex;align-items:center;gap:12px}
+.sound-control,.menu-toggle{height:39px;border:1px solid rgba(23,25,27,.2);border-radius:22px;background:transparent;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.sound-control:hover,.menu-toggle:hover{border-color:var(--wine);color:var(--wine)}
+.sound-icon{width:14px;height:14px;display:block}.sound-control[aria-pressed=true]{background:var(--carbon);border-color:var(--carbon);color:var(--paper)}
+.sound-label,.menu-label{font-size:8px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.nav-cta{min-height:41px;display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:0 17px;border:1px solid var(--wine);border-radius:24px;background:var(--wine);color:#fff!important;font-size:9px!important;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,transform .2s}.nav-cta:hover{background:var(--deep);transform:translateY(-1px)}
+.menu-toggle{display:none}
+.journey-rail{position:fixed;z-index:8;top:96px;right:clamp(10px,2vw,28px);bottom:20px;width:46px;height:calc(100vh - 116px);pointer-events:none;opacity:.62}
+.journey-rail path{fill:none;stroke-linecap:round;stroke-linejoin:round}.journey-rail .rail-edge{stroke:var(--wine);stroke-width:9}.journey-rail .rail-core{stroke:var(--carbon);stroke-width:5.5}.journey-rail .rail-glint{stroke:var(--silver);stroke-width:1.4;stroke-dasharray:9 91;stroke-dashoffset:calc(100 - var(--scroll));transition:stroke-dashoffset .18s linear}
+main{position:relative;isolation:isolate}
+section{position:relative;scroll-margin-top:76px}
+.hero{min-height:100svh;min-height:max(730px,100svh);position:relative;overflow:hidden;display:flex;align-items:stretch;padding:76px clamp(24px,8vw,126px) 0;background:var(--carbon);color:var(--paper)}
+.hero-photo{position:absolute;inset:0;background-image:linear-gradient(90deg,#17191b 0%,rgba(23,25,27,.96) 22%,rgba(23,25,27,.74) 54%,rgba(23,25,27,.5) 100%),linear-gradient(0deg,rgba(23,25,27,.48),transparent 55%),url('pdsf-hero.jpg');background-position:center,right center;background-size:cover;opacity:.57;transform:scale(1.035);filter:saturate(.55);animation:scene-arrive 1.6s ease-out both}
+@keyframes scene-arrive{from{transform:scale(1.12);opacity:.1}to{transform:scale(1.035);opacity:.57}}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 79% 45%,transparent 5%,rgba(23,25,27,.18) 78%),linear-gradient(0deg,rgba(23,25,27,.65),transparent 32%)}
+.hero-art{position:absolute;z-index:1;right:-15%;top:4%;width:min(105vw,1600px);height:95%;overflow:visible;transform:translate3d(calc(var(--px)*18px),calc(var(--py)*12px),0) scale(1.02);transform-origin:58% 48%;will-change:transform;opacity:.95}
+.hero-art path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.hero-art .ribbon-silver{stroke:#B8B6B1;stroke-width:154;opacity:.9}
+.hero-art .ribbon-wine{stroke:url(#wineFlow);stroke-width:142}
+.hero-art .ribbon-carbon{stroke:url(#carbonFlow);stroke-width:102}
+.hero-art .ribbon-glint{stroke:rgba(244,242,238,.8);stroke-width:2;stroke-dasharray:3 86;animation:glide 12s linear infinite}
+@keyframes glide{to{stroke-dashoffset:-890}}
+.hero-copy{z-index:3;position:relative;align-self:center;width:min(740px,64%);padding-top:82px;padding-bottom:92px;transform:translateY(calc(var(--scroll)*-.08px));animation:copy-arrive .8s .18s both}
+@keyframes copy-arrive{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{font-size:9px;letter-spacing:.25em;text-transform:uppercase;display:flex;align-items:center;gap:12px;color:#d6d2ce}.eyebrow:before{content:"";width:29px;height:1px;background:var(--wine);flex:0 0 auto}
+.hero .eyebrow{margin-bottom:29px}
+.hero h1{max-width:790px;font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(54px,7vw,106px);line-height:.94;letter-spacing:-.058em;font-weight:400;margin:0 0 23px}
+.hero h1 em{font-style:normal;color:#c8858d}
+.hero-copy>p{font-size:clamp(14px,1.2vw,17px);line-height:1.75;color:#d0cfcb;max-width:440px;margin:0}
+.hero-actions{display:flex;align-items:center;gap:24px;margin-top:32px}
+.button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:0 21px;border:1px solid var(--wine);border-radius:28px;background:var(--wine);color:#fff;font-size:9px;letter-spacing:.16em;text-transform:uppercase;transition:transform .25s,background .25s,border-color .25s}
+.button:hover,.button:focus-visible{transform:translateY(-2px);background:var(--deep);border-color:var(--deep)}
+.button-quiet{background:transparent;border-color:rgba(244,242,238,.38);color:var(--paper)}.button-quiet:hover{background:var(--paper);border-color:var(--paper);color:var(--carbon)}
+.arrow{font-size:16px;line-height:1}
+.hero-meta{position:absolute;left:clamp(24px,8vw,126px);right:clamp(50px,9vw,150px);bottom:27px;z-index:3;display:flex;justify-content:space-between;align-items:end;color:#d2d0cc;font-size:8px;line-height:1.8;letter-spacing:.16em;text-transform:uppercase}
+.hero-meta .scroll-hint{display:flex;align-items:center;gap:10px}.scroll-hint i{display:block;width:1px;height:28px;background:linear-gradient(var(--silver),transparent);animation:scroll-pulse 1.8s ease-in-out infinite}@keyframes scroll-pulse{50%{transform:scaleY(.55);transform-origin:top;opacity:.4}}
+.hero-code{font-family:Georgia,serif;font-size:12px;color:#d4c7c7}
+.manifesto{overflow:hidden;background:linear-gradient(118deg,var(--deep),var(--wine) 62%,#481018);color:var(--paper);padding:clamp(92px,13vw,178px) clamp(24px,8vw,126px) clamp(72px,10vw,128px)}
+.manifesto-art{position:absolute;inset:0;width:100%;height:100%;opacity:.29;pointer-events:none}
+.manifesto-art path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.manifesto-art .ribbon-silver{stroke:var(--silver);stroke-width:94}.manifesto-art .ribbon-wine{stroke:var(--deep);stroke-width:78}.manifesto-art .ribbon-core{stroke:var(--carbon);stroke-width:48}.manifesto-content{position:relative;z-index:2;max-width:990px}
+.manifesto .eyebrow{color:#e3d8d6}
+.manifesto h2{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(43px,7.8vw,112px);font-weight:400;line-height:.96;letter-spacing:-.055em;max-width:950px;margin:27px 0 24px}
+.manifesto h2 em{font-style:normal;color:#d4babd}
+.manifesto-copy{max-width:510px;margin:0;color:#e4d9d7;font-size:15px;line-height:1.8}
+.flow-pillars{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(60px,9vw,115px);border-top:1px solid rgba(244,242,238,.36)}
+.pillar{padding:20px clamp(12px,2.8vw,36px) 0 0;border-right:1px solid rgba(244,242,238,.25);display:grid;grid-template-columns:42px 1fr;column-gap:11px;align-items:start}
+.pillar:not(:first-child){padding-left:clamp(12px,2.8vw,36px)}.pillar:last-child{border:0}
+.pillar-num{font-family:Georgia,serif;font-size:27px;color:#d7c5c5}.pillar-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding-top:6px}.pillar p{grid-column:2;font-size:11px;line-height:1.55;color:#e0d3d2;margin:8px 0 0;max-width:250px}
+.solutions{background:var(--paper);padding:clamp(90px,12vw,162px) clamp(24px,8vw,126px) clamp(95px,12vw,155px)}
+.section-head{display:grid;grid-template-columns:1fr .75fr;gap:7vw;align-items:end;margin-bottom:55px}
+.section-head h2,.method h2,.about h2,.contact-cta h2{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(42px,6vw,80px);line-height:.99;letter-spacing:-.055em;font-weight:400;margin:20px 0 0}
+.section-head .eyebrow{color:#4d4b48}.section-head p{font-size:14px;line-height:1.7;color:var(--muted);max-width:440px;margin:0 0 4px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+.solutions-console{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(26px,6vw,86px);align-items:stretch}
+.solution-list{border-top:1px solid rgba(23,25,27,.22)}
+.solution-option{width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid rgba(23,25,27,.18);padding:20px 3px 19px;display:grid;grid-template-columns:38px 1fr 24px;gap:14px;align-items:center;cursor:pointer;color:var(--ink);transition:padding .28s,color .2s}
+.solution-option:hover,.solution-option[aria-pressed=true]{padding-left:11px;color:var(--wine)}
+.solution-option .option-num{font-family:Georgia,serif;font-size:18px;color:#8d8881}.solution-option[aria-pressed=true] .option-num{color:var(--wine)}
+.solution-option .option-name{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:clamp(19px,2vw,28px);line-height:1.08;letter-spacing:-.02em}
+.solution-option .option-mark{font-size:19px;transition:transform .24s}.solution-option[aria-pressed=true] .option-mark{transform:rotate(45deg)}
+.solution-stage{min-height:440px;position:relative;overflow:hidden;isolation:isolate;background:var(--carbon);color:var(--paper);padding:clamp(23px,4vw,50px);display:flex;flex-direction:column;justify-content:end}
+.solution-stage:before{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(180deg,rgba(23,25,27,.08),rgba(23,25,27,.92)),url('pdsf-hero.jpg') center 48%/cover;filter:saturate(.5);transition:transform .9s,filter .7s}.solution-stage:hover:before{transform:scale(1.04);filter:saturate(.8)}
+.solution-stage:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(110deg,rgba(50,8,14,.65),transparent 68%)}
+.stage-ribbon{position:absolute;z-index:-1;width:125%;height:108%;left:4%;top:-30%;opacity:.82;transform:translate3d(calc(var(--px)*.4),calc(var(--py)*.4),0) rotate(-8deg);transition:transform .75s cubic-bezier(.2,.7,.2,1)}
+.stage-ribbon path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}.stage-ribbon .stage-edge{stroke:var(--silver);stroke-width:85}.stage-ribbon .stage-wine{stroke:url(#stageWine);stroke-width:76}.stage-ribbon .stage-core{stroke:var(--carbon);stroke-width:51}.stage-ribbon .stage-glint{stroke:rgba(244,242,238,.8);stroke-width:1.5;stroke-dasharray:4 65;animation:glide 12s linear infinite}
+.solution-stage[data-scene="projects"] .stage-ribbon{transform:translate3d(calc(var(--px)*.4),calc(var(--py)*.4),0) rotate(13deg) scale(1.06)}
+.solution-stage[data-scene="processes"] .stage-ribbon{transform:translate3d(calc(var(--px)*.4),calc(var(--py)*.4),0) rotate(-21deg) scale(.98)}
+.solution-stage[data-scene="payments"] .stage-ribbon{transform:translate3d(calc(var(--px)*.4),calc(var(--py)*.4),0) rotate(26deg) scale(1.08)}
+.stage-label{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#ddd5d3;margin-bottom:auto}
+.stage-count{font-family:Georgia,serif;font-size:12px;color:#d5c7c7;margin-bottom:12px}
+.solution-stage h3{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-weight:400;font-size:clamp(35px,5vw,65px);line-height:.98;letter-spacing:-.04em;margin:0 0 15px;max-width:560px}
+.solution-stage p{font-size:13px;line-height:1.7;color:#e2dfdc;max-width:480px;margin:0}
+.stage-link{align-self:flex-start;margin-top:24px;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:#fff;border-bottom:1px solid rgba(255,255,255,.55);padding:0 0 8px;display:flex;align-items:center;gap:13px}.stage-link span{font-size:15px;transition:transform .2s}.stage-link:hover span{transform:translateX(4px)}
+.method{overflow:hidden;background:var(--carbon);color:var(--paper);padding:clamp(90px,12vw,155px) clamp(24px,8vw,126px) clamp(95px,12vw,160px)}
+.method:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 95% 0%,rgba(91,17,26,.42),transparent 48%);pointer-events:none}
+.method-inner{position:relative;z-index:2}
+.method .eyebrow{color:#d4ccca}
+.method-head{display:grid;grid-template-columns:1fr .75fr;gap:7vw;align-items:end;margin-bottom:72px}.method h2{margin-bottom:0}
+.method-head p{font-size:14px;line-height:1.75;color:#c6c3c0;max-width:435px;margin:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.method-track{position:absolute;top:27px;left:0;width:100%;height:2px;overflow:visible}
+.method-track path{fill:none;stroke:rgba(244,242,238,.24);stroke-width:1}.method-track .track-active{stroke:#a85e66;stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.5s cubic-bezier(.2,.7,.2,1)}
+.method.is-active .track-active{stroke-dashoffset:0}
+.step{position:relative;padding-right:20px}.step:not(:first-of-type){padding-left:20px}
+.step-marker{position:relative;width:56px;height:56px;display:grid;place-items:center;background:var(--carbon);border:1px solid #d2c4c2;border-radius:50%;font-family:Georgia,serif;font-size:18px;color:#fff;margin:0 0 27px;transition:background .35s,border-color .35s,transform .35s}
+.method.is-active .step-marker{border-color:#9f646a}.step:hover .step-marker{background:var(--wine);transform:scale(1.06)}
+.step h3{font-family:"Iowan Old Style",Baskerville,"Times New Roman",serif;font-size:25px;font-weight:400;margin:0 0 11px}
+.step p{font-size:11px;line-height:1.7;color:#c2bfbc;max-width:220px;margin:0}
+.about{background:#fff;padding:clamp(90px,12vw,150px) clamp(24px,8vw,126px);display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:center}
+.about .eyebrow{color:#514f4c}.about h2{max-width:580px}
+.about-copy p{font-size:15px;line-height:1.8;color:#565551;margin:22px 0 0;max-width:570px}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:25px 30px;border-left:1px solid var(--line);padding-left:40px}
+.value{display:flex;gap:14px}.value .tick{color:var(--wine);font-size:18px;line-height:1}.value strong{display:block;font-family:"Iowan Old Style",Baskerville,serif;font-size:20px;font-weight:400;margin-bottom:6px}.value span{color:#666;font-size:11px;line-height:1.55}
+.contact-cta{min-height:550px;position:relative;overflow:hidden;background:linear-gradient(115deg,var(--deep),var(--wine));color:white;display:flex;align-items:center;padding:clamp(80px,10vw,130px) clamp(24px,8vw,126px)}
+.contact-cta:before{content:"";position:absolute;inset:0 0 0 32%;background:linear-gradient(90deg,rgba(50,8,14,.97),rgba(50,8,14,.18) 75%),url('pdsf-hero.jpg') center 60%/cover;opacity:.65;filter:saturate(.6)}
+.cta-ribbon{position:absolute;inset:-28% -12% -35% 28%;width:90%;height:155%;opacity:.62;pointer-events:none}
+.cta-ribbon path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}.cta-ribbon .edge{stroke:var(--silver);stroke-width:110}.cta-ribbon .wine{stroke:url(#ctaWine);stroke-width:100}.cta-ribbon .core{stroke:var(--carbon);stroke-width:68}.cta-inner{position:relative;z-index:2;max-width:740px}
+.contact-cta .eyebrow:before{background:#d49aa0}
+.contact-cta h2{font-size:clamp(52px,8vw,112px);margin:26px 0 18px}.contact-cta h2 em{font-style:normal;color:#d8bdc0}
+.contact-cta p{font-size:15px;line-height:1.75;color:#eee0df;max-width:440px;margin:0 0 30px}
+.contact-cta .button{background:var(--paper);border-color:var(--paper);color:var(--wine)}.contact-cta .button:hover{background:#fff;border-color:#fff;color:var(--deep)}
+.footer{min-height:92px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px;padding:20px clamp(20px,5vw,78px);background:var(--paper);border-top:1px solid var(--line)}
+.footer .brand{width:145px}.footer-nav{display:flex;gap:23px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#444}
+.copyright{justify-self:end;text-align:right;font-size:8px;line-height:1.8;letter-spacing:.08em;color:#686866}
+@media(max-width:1000px){.topbar{padding:0 24px}.brand{width:157px}.nav{gap:17px}.nav a{font-size:8px}.header-tools{gap:8px}.sound-control{padding:0 10px}.sound-label{font-size:7px}.nav-cta{padding:0 13px}.hero-copy{width:min(700px,70%)}.hero-art{right:-23%;width:112vw}.solutions-console{grid-template-columns:.92fr 1.08fr;gap:28px}.solution-stage{min-height:420px}.footer{grid-template-columns:1fr 1fr}.footer-nav{display:none}}
+@media(max-width:700px){
+ html{scroll-padding-top:68px}
+ .topbar{height:68px;padding:0 15px}.brand{width:139px}
+ .nav{display:none;position:absolute;left:0;right:0;top:100%;padding:8px 18px 18px;background:rgba(244,242,238,.98);border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(23,25,27,.08)}
+ .nav.is-open{display:grid;gap:0}.nav a:not(.nav-cta){padding:15px 4px;border-bottom:1px solid rgba(23,25,27,.1);font-size:9px}.nav .nav-cta{margin-top:12px;justify-self:start}
+ .menu-toggle{display:inline-flex;height:37px;padding:0 11px}.sound-control{height:37px;padding:0 9px}.sound-label{font-size:7px}
+ .header-tools{gap:7px}.journey-rail{top:82px;right:4px;width:19px;height:calc(100vh - 98px);opacity:.46}.journey-rail .rail-edge{stroke-width:5}.journey-rail .rail-core{stroke-width:3}.journey-rail .rail-glint{stroke-width:.8}
+ .hero{min-height:100svh;min-height:max(720px,100svh);padding:68px 22px 0;align-items:flex-start}
+ .hero-photo{inset:0;background-image:linear-gradient(90deg,rgba(23,25,27,.9),rgba(23,25,27,.57)),linear-gradient(0deg,rgba(23,25,27,.7),transparent 62%),url('pdsf-hero.jpg');background-position:60% center}
+ .hero-art{width:170vw;height:69%;right:-61%;top:16%;opacity:.55;transform:translate3d(calc(var(--px)*9px),calc(var(--py)*7px),0)}
+ .hero-art .ribbon-silver{stroke-width:105}.hero-art .ribbon-wine{stroke-width:96}.hero-art .ribbon-carbon{stroke-width:67}.hero-art .ribbon-glint{stroke-width:1.5}
+ .hero-copy{align-self:center;width:100%;max-width:520px;padding:116px 0 98px;transform:none}
+ .hero .eyebrow{font-size:7px;letter-spacing:.19em;gap:8px;margin-bottom:23px}.hero .eyebrow:before{width:20px}
+ .hero h1{font-size:clamp(48px,12.7vw,73px);line-height:.99;max-width:560px;margin-bottom:18px}
+ .hero-copy>p{font-size:13px;line-height:1.7;max-width:340px}
+ .hero-actions{gap:10px;margin-top:23px;align-items:flex-start;flex-direction:column}.button{min-height:44px;padding:0 17px;font-size:8px}.button-quiet{border:0;padding-left:4px;min-height:34px}
+ .hero-meta{left:22px;right:27px;bottom:22px;font-size:7px}.hero-meta .scroll-hint{gap:7px}.hero-code{font-size:10px}
+ .manifesto{padding:86px 22px 66px}.manifesto-art{opacity:.22}.manifesto-art .ribbon-silver{stroke-width:50}.manifesto-art .ribbon-wine{stroke-width:42}.manifesto-art .ribbon-core{stroke-width:26}
+ .manifesto h2{font-size:clamp(42px,11.2vw,65px);margin:21px 0 19px}.manifesto-copy{font-size:13px;line-height:1.75}
+ .flow-pillars{grid-template-columns:1fr;margin-top:45px}.pillar,.pillar:not(:first-child){padding:14px 0;border-right:0;border-bottom:1px solid rgba(244,242,238,.22);grid-template-columns:33px 1fr;column-gap:9px}.pillar:last-child{border-bottom:0}.pillar-num{font-size:22px}.pillar-title{font-size:9px;padding-top:4px}.pillar p{font-size:10px;margin-top:5px}
+ .solutions{padding:82px 21px 90px}.section-head{display:block;margin-bottom:31px}.section-head h2,.method h2,.about h2{font-size:clamp(42px,11vw,62px);margin-top:18px}.section-head p{font-size:13px;line-height:1.65;margin-top:18px}
+ .solutions-console{grid-template-columns:1fr;gap:20px}.solution-option{grid-template-columns:30px 1fr 20px;padding:16px 2px}.solution-option .option-name{font-size:20px}.solution-stage{min-height:410px;padding:22px}.solution-stage h3{font-size:clamp(36px,10vw,53px)}.solution-stage p{font-size:12px}.stage-ribbon{width:155%;left:-2%;top:-17%}
+ .method{padding:83px 22px 91px}.method-head{display:block;margin-bottom:42px}.method-head p{font-size:13px;line-height:1.7;margin-top:17px}.steps{grid-template-columns:1fr 1fr;gap:32px 15px}.method-track{display:none}.step,.step:not(:first-of-type){padding:0}.step-marker{width:43px;height:43px;font-size:15px;margin-bottom:15px}.step h3{font-size:20px;margin-bottom:8px}.step p{font-size:10px;line-height:1.6}.step:last-child{grid-column:2}
+ .about{padding:82px 21px;grid-template-columns:1fr;gap:31px}.about-copy p{font-size:13px;line-height:1.75;margin-top:17px}.values{padding:24px 0 0;border-left:0;border-top:1px solid var(--line);gap:20px 12px}.value{gap:8px}.value strong{font-size:17px}.value span{font-size:10px}
+ .contact-cta{min-height:470px;padding:74px 22px}.contact-cta:before{inset:0;background:linear-gradient(90deg,rgba(50,8,14,.96),rgba(50,8,14,.54)),url('pdsf-hero.jpg') center/cover;opacity:.8}.cta-ribbon{inset:-2% -54% 0 -7%;width:160%;height:94%;opacity:.42}.cta-ribbon .edge{stroke-width:75}.cta-ribbon .wine{stroke-width:68}.cta-ribbon .core{stroke-width:45}
+ .contact-cta h2{font-size:clamp(49px,12.5vw,72px);margin:20px 0 15px}.contact-cta p{font-size:13px;line-height:1.7}.footer{min-height:75px;padding:16px 18px;grid-template-columns:1fr auto;gap:8px}.footer .brand{width:122px}.copyright{font-size:7px}.reveal{transform:translateY(14px)}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+ .reveal{opacity:1;transform:none}.hero-photo{transform:none}.hero-art{transform:none}
+}
 </style>
-</head><body><div class="progress" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<header class="topbar"><a class="brand" href="#inicio" aria-label="PDSF Consultoria — início"><img src="pdsf-logo.png" alt="PDSF Consultoria — Estratégia, Soluções, Resultados"></a><nav class="nav" aria-label="Navegação principal"><a href="#a-pdsf">A PDSF</a><a href="#solucoes">Soluções</a><a href="#metodo">Como trabalhamos</a><a href="#contato">Contato</a><a class="nav-cta" href="contato.html">Fale conosco <span class="arrow">→</span></a></nav></header>
-<main><svg class="page-flow" viewBox="0 0 60 800" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="flow-edge" d="M50 -24 C12 52 55 128 31 204 S11 300 44 385 S55 490 20 584 S13 696 39 824"/><path class="flow-core" d="M50 -24 C12 52 55 128 31 204 S11 300 44 385 S55 490 20 584 S13 696 39 824"/><path class="flow-glint" pathLength="100" d="M50 -24 C12 52 55 128 31 204 S11 300 44 385 S55 490 20 584 S13 696 39 824"/></svg><section class="hero" id="inicio"><div class="hero-photo" aria-hidden="true"></div><div class="hero-copy"><div class="eyebrow">Estratégia <span>·</span> Soluções <span>·</span> Resultados</div><h1>Estratégia que transforma decisões em <em>resultados.</em></h1><p>Consultoria estratégica orientada por análise, planejamento e execução — para construir o próximo capítulo do seu negócio.</p><div class="actions"><a class="button" href="#a-pdsf">Conheça a PDSF <span class="arrow">→</span></a><a class="button button-light" href="#solucoes">Explore as soluções <span class="arrow">↘</span></a></div></div><div class="hero-list">Visão<br>Planejamento<br>Execução<br>Resultados</div><div class="hero-scroll">Role para explorar</div></section>
-<section class="flow-statement" aria-label="Pilares PDSF"><div class="pillar"><div class="pillar-num">01</div><div><div class="pillar-title">Estratégia</div><p>Análise profunda para direcionar decisões.</p></div></div><div class="pillar"><div class="pillar-num">02</div><div><div class="pillar-title">Soluções</div><p>Estrutura e execução para gerar valor.</p></div></div><div class="pillar"><div class="pillar-num">03</div><div><div class="pillar-title">Resultados</div><p>Acompanhamento contínuo para evoluir.</p></div></div></section>
-<section class="solutions section-wrap" id="solucoes"><div class="section-heading reveal"><div><div class="eyebrow">01 — Nossas soluções</div><h2>Soluções para<br>desafios reais.</h2></div><p>A PDSF atua na construção de soluções empresariais, gestão de projetos, estruturação de processos e no segmento de pagamentos e serviços financeiros.</p></div><div class="service-grid"><article class="service reveal"><div class="service-top"><span>01 / DIREÇÃO</span><span>↗</span></div><svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 34h31M9 31V20h7v11m3 0V12h7v19m3 0V6h6v25"/><path d="m7 15 8-6 7 1 10-8"/></svg><h3>Consultoria<br>Empresarial</h3><p>Análise e direcionamento para decisões mais seguras e evolução do negócio.</p><a href="contato.html?assunto=Consultoria%20Empresarial">Saiba mais <span>→</span></a><i class="mark" aria-hidden="true"></i></article><article class="service reveal"><div class="service-top"><span>02 / ENTREGA</span><span>↗</span></div><svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="6"/><path d="m24 16 9-9m-5-1 7 1-1 7"/></svg><h3>Gestão de<br>Projetos</h3><p>Estruturação, coordenação e acompanhamento para transformar planos em resultados.</p><a href="contato.html?assunto=Gestao%20de%20Projetos">Saiba mais <span>→</span></a><i class="mark" aria-hidden="true"></i></article><article class="service reveal"><div class="service-top"><span>03 / ESTRUTURA</span><span>↗</span></div><svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="7" y="7" width="26" height="26" rx="2"/><path d="M13 14h14M13 20h14M13 26h9M4 13v20a3 3 0 0 0 3 3h20"/></svg><h3>Estruturação<br>de Processos</h3><p>Organização e eficiência para operações mais consistentes e escaláveis.</p><a href="contato.html?assunto=Estruturacao%20de%20Processos">Saiba mais <span>→</span></a><i class="mark" aria-hidden="true"></i></article><article class="service reveal"><div class="service-top"><span>04 / FINANÇAS</span><span>↗</span></div><svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="9" width="30" height="22" rx="2"/><path d="M5 16h30M11 25h8"/><circle cx="29" cy="25" r="2"/></svg><h3>Pagamentos &amp;<br>Serviços Financeiros</h3><p>Consultoria especializada em operações e soluções do ecossistema de pagamentos.</p><a href="contato.html?assunto=Pagamentos%20e%20Servicos%20Financeiros">Saiba mais <span>→</span></a><i class="mark" aria-hidden="true"></i></article></div></section>
-<section class="method" id="metodo"><div class="section-wrap"><div class="method-head reveal"><div><div class="eyebrow">02 — Como trabalhamos</div><h2>Do diagnóstico<br>ao resultado.</h2></div><p>Um processo claro e orientado a resultados, que combina análise, estrutura e execução — e continua evoluindo com cada etapa.</p></div><div class="steps"><article class="step reveal"><div class="step-circle">01</div><h3>Diagnóstico</h3><p>Entendimento profundo do contexto, dos desafios e das oportunidades.</p></article><article class="step reveal"><div class="step-circle">02</div><h3>Direcionamento</h3><p>Definição de caminhos, prioridades e objetivos compartilhados.</p></article><article class="step reveal"><div class="step-circle">03</div><h3>Execução</h3><p>Implementação e acompanhamento próximo das iniciativas.</p></article><article class="step reveal"><div class="step-circle">04</div><h3>Evolução</h3><p>Medição, aprendizado e melhoria contínua dos resultados.</p></article></div></div></section>
-<section class="about" id="a-pdsf"><div class="reveal"><div class="eyebrow">03 — A PDSF</div><h2>Consultoria com visão prática.</h2><p>A PDSF atua próxima aos negócios e aos desafios reais da operação. Combinamos análise, organização e execução para transformar necessidades complexas em soluções aplicáveis.</p><p>Entender antes de agir. Construir com propósito. Acompanhar para evoluir.</p></div><div class="values reveal"><div class="value"><span class="tick">↗</span><div><strong>Clareza</strong><span>Informação organizada para decisões mais conscientes.</span></div></div><div class="value"><span class="tick">↗</span><div><strong>Objetividade</strong><span>Foco no que realmente precisa ser resolvido.</span></div></div><div class="value"><span class="tick">↗</span><div><strong>Execução</strong><span>Estratégia que sai do planejamento e ganha forma.</span></div></div><div class="value"><span class="tick">↗</span><div><strong>Evolução</strong><span>Projetos e processos acompanhados e aprimorados.</span></div></div></div></section>
-<section class="contact-cta" id="contato"><div class="cta-inner reveal"><div class="eyebrow">Vamos conversar?</div><h2>Todo desafio tem<br>um ponto de partida.</h2><p>Conte o que você quer transformar. Vamos encontrar juntos o caminho para o próximo passo.</p><a class="button" href="contato.html">Fale com a PDSF <span class="arrow">→</span></a></div></section></main>
-<footer class="footer"><a class="brand" href="#inicio" aria-label="PDSF início"><img src="pdsf-logo.png" alt="PDSF Consultoria"></a><div class="footer-nav"><a href="#a-pdsf">A PDSF</a><a href="#solucoes">Soluções</a><a href="#metodo">Como trabalhamos</a><a href="contato.html">Contato</a></div><div class="copyright">© PDSF Consultoria<br>Estratégia · Soluções · Resultados</div></footer>
-<script>(()=>{const root=document.documentElement;let busy=false;function onScroll(){const max=document.documentElement.scrollHeight-innerHeight;root.style.setProperty('--scroll',max?Math.min(100,scrollY/max*100):0);busy=false}addEventListener('scroll',()=>{if(!busy){requestAnimationFrame(onScroll);busy=true}},{passive:true});onScroll();if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){let raf;addEventListener('pointermove',e=>{if(raf)return;raf=requestAnimationFrame(()=>{root.style.setProperty('--mx',(e.clientX/innerWidth-.5).toFixed(2));root.style.setProperty('--my',(e.clientY/innerHeight-.5).toFixed(2));raf=null})},{passive:true})}const els=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -35px 0px'});els.forEach(el=>io.observe(el))}else els.forEach(el=>el.classList.add('in'))})();</script></body></html>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="#inicio" aria-label="PDSF Consultoria — início"><img src="pdsf-logo.png" alt="PDSF Consultoria — Estratégia, Soluções, Resultados"></a>
+  <nav class="nav" id="main-nav" aria-label="Navegação principal">
+    <a href="#solucoes">Soluções</a><a href="#metodo">Método</a><a href="#sobre">A PDSF</a><a href="#contato">Contato</a>
+    <a class="nav-cta" href="contato.html">Vamos conversar? <span class="arrow" aria-hidden="true">→</span></a>
+  </nav>
+  <div class="header-tools">
+    <button class="sound-control" id="sound-toggle" type="button" aria-pressed="false" aria-label="Ativar sons de interação">
+      <svg class="sound-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 8v4h3l4 3V5L6 8H3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M13 7a4 4 0 0 1 0 6m2-8a7 7 0 0 1 0 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <span class="sound-label" id="sound-label">Som · off</span>
+    </button>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu"><span class="menu-label">Menu</span><span aria-hidden="true">☰</span></button>
+  </div>
+</header>
+<svg class="journey-rail" viewBox="0 0 60 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="rail-edge" d="M50 -24 C12 52 55 128 31 204 S11 300 44 385 S55 490 20 584 S13 696 39 824"/>
+  <path class="rail-core" d="M50 -24 C12 52 55 128 31 204 S11 300 44 385 S55 490 20 584 S13 696 39 824"/>
+  <path class="rail-glint" pathLength="100" d="M50 -24 C12 52 55 128 31 204 S11 300 44 385 S55 490 20 584 S13 696 39 824"/>
+</svg>
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <svg class="hero-art" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="wineFlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32080E"/><stop offset=".46" stop-color="#8A2633"/><stop offset=".72" stop-color="#5B111A"/><stop offset="1" stop-color="#32080E"/></linearGradient>
+        <linearGradient id="carbonFlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17191B"/><stop offset=".52" stop-color="#282b2d"/><stop offset="1" stop-color="#101112"/></linearGradient>
+      </defs>
+      <path class="ribbon-silver" d="M1200 -150 C560 20 770 205 1230 285 C1690 365 1540 500 960 544 C380 588 470 760 970 820 C1280 858 1390 960 1480 1160"/>
+      <path class="ribbon-wine" d="M1200 -150 C560 20 770 205 1230 285 C1690 365 1540 500 960 544 C380 588 470 760 970 820 C1280 858 1390 960 1480 1160"/>
+      <path class="ribbon-carbon" d="M1200 -150 C560 20 770 205 1230 285 C1690 365 1540 500 960 544 C380 588 470 760 970 820 C1280 858 1390 960 1480 1160"/>
+      <path class="ribbon-glint" d="M1200 -150 C560 20 770 205 1230 285 C1690 365 1540 500 960 544 C380 588 470 760 970 820 C1280 858 1390 960 1480 1160"/>
+    </svg>
+    <div class="hero-copy">
+      <div class="eyebrow">Estratégia <span>·</span> Soluções <span>·</span> Resultados</div>
+      <h1 id="hero-title">Estratégia que transforma decisões em <em>resultados.</em></h1>
+      <p>Todo negócio está em movimento. A PDSF encontra direção, estrutura e ritmo para transformar escolhas em avanço.</p>
+      <div class="hero-actions"><a class="button" href="#fluxo">Acompanhe o fluxo <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-quiet" href="contato.html">Inicie uma conversa <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="hero-meta"><span>Um movimento contínuo<br>de decisão a resultado</span><span class="scroll-hint">Role para explorar <i aria-hidden="true"></i></span><span class="hero-code">01 / 04</span></div>
+  </section>
+
+  <section class="manifesto" id="fluxo" aria-labelledby="manifesto-title">
+    <svg class="manifesto-art" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path class="ribbon-silver" d="M-100 470 C220 250 380 600 660 390 S1030 160 1310 350 S1540 570 1720 280"/>
+      <path class="ribbon-wine" d="M-100 470 C220 250 380 600 660 390 S1030 160 1310 350 S1540 570 1720 280"/>
+      <path class="ribbon-core" d="M-100 470 C220 250 380 600 660 390 S1030 160 1310 350 S1540 570 1720 280"/>
+    </svg>
+    <div class="manifesto-content reveal"><div class="eyebrow">PDSF Flow · Nosso princípio</div><h2 id="manifesto-title">Decisões ganham força quando encontram <em>direção.</em></h2><p class="manifesto-copy">Um fluxo conecta o que precisa ser compreendido ao que precisa acontecer. Estratégia, soluções e resultados fazem parte do mesmo movimento.</p></div>
+    <div class="flow-pillars reveal" aria-label="Pilares da PDSF">
+      <div class="pillar"><span class="pillar-num">01</span><div class="pillar-title">Estratégia</div><p>Análise profunda para direcionar decisões.</p></div>
+      <div class="pillar"><span class="pillar-num">02</span><div class="pillar-title">Soluções</div><p>Estrutura e execução para gerar valor.</p></div>
+      <div class="pillar"><span class="pillar-num">03</span><div class="pillar-title">Resultados</div><p>Acompanhamento contínuo para evoluir.</p></div>
+    </div>
+  </section>
+
+  <section class="solutions" id="solucoes" aria-labelledby="solutions-title">
+    <div class="section-head reveal"><div><div class="eyebrow">01 — Nossas soluções</div><h2 id="solutions-title">Encontre o próximo movimento.</h2></div><p>Escolha uma frente e descubra como a PDSF pode ajudar seu negócio a avançar com mais clareza.</p></div>
+    <div class="solutions-console">
+      <div class="solution-list" role="group" aria-label="Frentes de atuação">
+        <button class="solution-option" type="button" aria-pressed="true" data-scene="consulting" data-title="Consultoria Empresarial" data-copy="Análise e direcionamento para decisões mais seguras e evolução do negócio." data-label="01 / DIREÇÃO" data-subject="Consultoria Empresarial"><span class="option-num">01</span><span class="option-name">Consultoria Empresarial</span><span class="option-mark" aria-hidden="true">+</span></button>
+        <button class="solution-option" type="button" aria-pressed="false" data-scene="projects" data-title="Gestão de Projetos" data-copy="Estruturação, coordenação e acompanhamento para transformar planos em resultados." data-label="02 / ENTREGA" data-subject="Gestão de Projetos"><span class="option-num">02</span><span class="option-name">Gestão de Projetos</span><span class="option-mark" aria-hidden="true">+</span></button>
+        <button class="solution-option" type="button" aria-pressed="false" data-scene="processes" data-title="Estruturação de Processos" data-copy="Organização e eficiência para operações mais consistentes e escaláveis." data-label="03 / ESTRUTURA" data-subject="Estruturação de Processos"><span class="option-num">03</span><span class="option-name">Estruturação de Processos</span><span class="option-mark" aria-hidden="true">+</span></button>
+        <button class="solution-option" type="button" aria-pressed="false" data-scene="payments" data-title="Pagamentos &amp; Serviços Financeiros" data-copy="Consultoria especializada em operações e soluções do ecossistema de pagamentos." data-label="04 / FINANÇAS" data-subject="Pagamentos &amp; Serviços Financeiros"><span class="option-num">04</span><span class="option-name">Pagamentos &amp; Serviços Financeiros</span><span class="option-mark" aria-hidden="true">+</span></button>
+      </div>
+      <article class="solution-stage" id="solution-stage" data-scene="consulting" aria-live="polite" aria-atomic="true">
+        <svg class="stage-ribbon" viewBox="0 0 700 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="stageWine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32080E"/><stop offset=".5" stop-color="#7B202C"/><stop offset="1" stop-color="#5B111A"/></linearGradient></defs><path class="stage-edge" d="M-70 500 C120 240 280 170 430 275 S560 480 790 120"/><path class="stage-wine" d="M-70 500 C120 240 280 170 430 275 S560 480 790 120"/><path class="stage-core" d="M-70 500 C120 240 280 170 430 275 S560 480 790 120"/><path class="stage-glint" d="M-70 500 C120 240 280 170 430 275 S560 480 790 120"/></svg>
+        <span class="stage-label" id="stage-label">01 / DIREÇÃO</span><span class="stage-count" id="stage-count">Frente 01 de 04</span><h3 id="stage-title">Consultoria Empresarial</h3><p id="stage-copy">Análise e direcionamento para decisões mais seguras e evolução do negócio.</p><a class="stage-link" id="stage-link" href="contato.html?assunto=Consultoria%20Empresarial">Inicie uma conversa <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="method" id="metodo" aria-labelledby="method-title">
+    <div class="method-inner">
+      <div class="method-head reveal"><div><div class="eyebrow">02 — Como trabalhamos</div><h2 id="method-title">Do diagnóstico<br>à evolução.</h2></div><p>Um processo claro que transforma entendimento em ação e acompanha cada resultado até o próximo passo.</p></div>
+      <div class="steps" id="method-steps">
+        <svg class="method-track" viewBox="0 0 100 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1H100"/><path class="track-active" pathLength="1" d="M0 1H100"/></svg>
+        <article class="step reveal"><div class="step-marker">01</div><h3>Diagnóstico</h3><p>Entendimento profundo do contexto, dos desafios e das oportunidades.</p></article>
+        <article class="step reveal"><div class="step-marker">02</div><h3>Direcionamento</h3><p>Definição de caminhos, prioridades e objetivos compartilhados.</p></article>
+        <article class="step reveal"><div class="step-marker">03</div><h3>Execução</h3><p>Implementação e acompanhamento próximo das iniciativas.</p></article>
+        <article class="step reveal"><div class="step-marker">04</div><h3>Evolução</h3><p>Medição, aprendizado e melhoria contínua dos resultados.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre" aria-labelledby="about-title">
+    <div class="about-copy reveal"><div class="eyebrow">03 — A PDSF</div><h2 id="about-title">Clareza para decidir. Estrutura para realizar.</h2><p>A PDSF atua próxima aos negócios e aos desafios reais da operação. Combinamos análise, organização e execução para transformar necessidades complexas em soluções aplicáveis.</p><p>Entender antes de agir. Construir com propósito. Acompanhar para evoluir.</p></div>
+    <div class="values reveal"><div class="value"><span class="tick" aria-hidden="true">↗</span><div><strong>Clareza</strong><span>Informação organizada para decisões mais conscientes.</span></div></div><div class="value"><span class="tick" aria-hidden="true">↗</span><div><strong>Objetividade</strong><span>Foco no que realmente precisa ser resolvido.</span></div></div><div class="value"><span class="tick" aria-hidden="true">↗</span><div><strong>Execução</strong><span>Estratégia que sai do planejamento e ganha forma.</span></div></div><div class="value"><span class="tick" aria-hidden="true">↗</span><div><strong>Evolução</strong><span>Projetos e processos acompanhados e aprimorados.</span></div></div></div>
+  </section>
+
+  <section class="contact-cta" id="contato" aria-labelledby="contact-title">
+    <svg class="cta-ribbon" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="ctaWine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32080E"/><stop offset=".55" stop-color="#7D2330"/><stop offset="1" stop-color="#5B111A"/></linearGradient></defs><path class="edge" d="M-80 610 C180 210 410 180 580 360 S820 680 1050 230 S1210 90 1320 170"/><path class="wine" d="M-80 610 C180 210 410 180 580 360 S820 680 1050 230 S1210 90 1320 170"/><path class="core" d="M-80 610 C180 210 410 180 580 360 S820 680 1050 230 S1210 90 1320 170"/></svg>
+    <div class="cta-inner reveal"><div class="eyebrow">O próximo passo começa aqui</div><h2 id="contact-title">Vamos<br>começar?</h2><p>Todo desafio tem um ponto de partida. Conte o que você quer transformar e vamos encontrar juntos o caminho.</p><a class="button" href="contato.html">Inicie uma conversa <span class="arrow" aria-hidden="true">↗</span></a></div>
+  </section>
+</main>
+<footer class="footer"><a class="brand" href="#inicio" aria-label="PDSF — voltar ao início"><img src="pdsf-logo.png" alt="PDSF Consultoria"></a><nav class="footer-nav" aria-label="Navegação do rodapé"><a href="#solucoes">Soluções</a><a href="#metodo">Método</a><a href="#sobre">A PDSF</a><a href="contato.html">Contato</a></nav><div class="copyright">© PDSF Consultoria<br>Estratégia · Soluções · Resultados</div></footer>
+<script>
+(()=>{
+  const root=document.documentElement;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let scrollBusy=false;
+  function updateScroll(){
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    root.style.setProperty('--scroll',max?Math.min(100,window.scrollY/max*100):0);
+    scrollBusy=false;
+  }
+  window.addEventListener('scroll',()=>{
+    if(!scrollBusy){requestAnimationFrame(updateScroll);scrollBusy=true}
+  },{passive:true});
+  updateScroll();
+
+  const hero=document.querySelector('.hero');
+  if(!reduced&&hero){
+    let pointerBusy=false;
+    hero.addEventListener('pointermove',event=>{
+      if(event.pointerType==='touch'&&!event.buttons)return;
+      if(pointerBusy)return;
+      pointerBusy=true;
+      requestAnimationFrame(()=>{
+        const box=hero.getBoundingClientRect();
+        root.style.setProperty('--px',((event.clientX-box.left)/box.width-.5).toFixed(2));
+        root.style.setProperty('--py',((event.clientY-box.top)/box.height-.5).toFixed(2));
+        pointerBusy=false;
+      });
+    },{passive:true});
+    hero.addEventListener('pointerleave',()=>{
+      root.style.setProperty('--px',0);
+      root.style.setProperty('--py',0);
+    },{passive:true});
+  }
+
+  const revealItems=document.querySelectorAll('.reveal');
+  if(!reduced&&'IntersectionObserver'in window){
+    const revealObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add('in');revealObserver.unobserve(entry.target)}
+      });
+    },{threshold:.13,rootMargin:'0px 0px -36px 0px'});
+    revealItems.forEach(item=>revealObserver.observe(item));
+  }else revealItems.forEach(item=>item.classList.add('in'));
+
+  const method=document.querySelector('.method');
+  if(method&&'IntersectionObserver'in window){
+    const methodObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{if(entry.isIntersecting){method.classList.add('is-active');methodObserver.unobserve(method)}});
+    },{threshold:.2});
+    methodObserver.observe(method);
+  }else if(method)method.classList.add('is-active');
+
+  const menuToggle=document.getElementById('menu-toggle');
+  const nav=document.getElementById('main-nav');
+  if(menuToggle&&nav){
+    menuToggle.addEventListener('click',()=>{
+      const isOpen=menuToggle.getAttribute('aria-expanded')==='true';
+      menuToggle.setAttribute('aria-expanded',String(!isOpen));
+      menuToggle.setAttribute('aria-label',isOpen?'Abrir menu':'Fechar menu');
+      nav.classList.toggle('is-open',!isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+      menuToggle.setAttribute('aria-expanded','false');
+      menuToggle.setAttribute('aria-label','Abrir menu');
+      nav.classList.remove('is-open');
+    }));
+    document.addEventListener('keydown',event=>{
+      if(event.key==='Escape'){
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.setAttribute('aria-label','Abrir menu');
+        nav.classList.remove('is-open');
+      }
+    });
+  }
+
+  const solutionOptions=Array.from(document.querySelectorAll('.solution-option'));
+  const stage=document.getElementById('solution-stage');
+  const stageLabel=document.getElementById('stage-label');
+  const stageCount=document.getElementById('stage-count');
+  const stageTitle=document.getElementById('stage-title');
+  const stageCopy=document.getElementById('stage-copy');
+  const stageLink=document.getElementById('stage-link');
+  let activeSolution=0;
+  const frequencies=[196,220,246.94,293.66];
+
+  solutionOptions.forEach((option,index)=>{
+    option.addEventListener('click',()=>{
+      activeSolution=index;
+      solutionOptions.forEach((item,itemIndex)=>item.setAttribute('aria-pressed',String(itemIndex===index)));
+      stage.dataset.scene=option.dataset.scene;
+      stageLabel.textContent=option.dataset.label;
+      stageCount.textContent='Frente '+String(index+1).padStart(2,'0')+' de 04';
+      stageTitle.textContent=option.dataset.title.replace('&amp;','&');
+      stageCopy.textContent=option.dataset.copy;
+      stageLink.href='contato.html?assunto='+encodeURIComponent(option.dataset.subject.replace('&amp;','&'));
+      playCue(frequencies[index]);
+    });
+  });
+
+  const soundToggle=document.getElementById('sound-toggle');
+  const soundLabel=document.getElementById('sound-label');
+  const AudioContextClass=window.AudioContext||window.webkitAudioContext;
+  let audioContext=null;
+  let audioEnabled=false;
+  if(!AudioContextClass){
+    soundToggle.disabled=true;
+    soundLabel.textContent='Som indisponível';
+    soundToggle.setAttribute('aria-label','Som indisponível neste navegador');
+  }
+  function playCue(frequency){
+    if(!audioEnabled||!audioContext)return;
+    const now=audioContext.currentTime;
+    [[frequency,0],[frequency*1.5,.08]].forEach(([hz,delay])=>{
+      const oscillator=audioContext.createOscillator();
+      const envelope=audioContext.createGain();
+      oscillator.type='sine';
+      oscillator.frequency.setValueAtTime(hz,now+delay);
+      envelope.gain.setValueAtTime(.0001,now+delay);
+      envelope.gain.exponentialRampToValueAtTime(.025,now+delay+.035);
+      envelope.gain.exponentialRampToValueAtTime(.0001,now+delay+.58);
+      oscillator.connect(envelope);
+      envelope.connect(audioContext.destination);
+      oscillator.start(now+delay);
+      oscillator.stop(now+delay+.62);
+      oscillator.onended=()=>{oscillator.disconnect();envelope.disconnect()};
+    });
+  }
+  soundToggle.addEventListener('click',async()=>{
+    if(!AudioContextClass)return;
+    if(!audioContext)audioContext=new AudioContextClass();
+    if(audioEnabled){
+      audioEnabled=false;
+      soundToggle.setAttribute('aria-pressed','false');
+      soundToggle.setAttribute('aria-label','Ativar sons de interação');
+      soundLabel.textContent='Som · off';
+    }else{
+      try{await audioContext.resume()}catch{return}
+      audioEnabled=true;
+      soundToggle.setAttribute('aria-pressed','true');
+      soundToggle.setAttribute('aria-label','Desativar sons de interação');
+      soundLabel.textContent='Som · on';
+      playCue(220);
+    }
+  });
+  document.querySelectorAll('.button,.nav-cta').forEach(link=>{
+    link.addEventListener('click',()=>playCue(329.63));
+  });
+})();
+</script>
+</body>
+</html>
