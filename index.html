@@ -169,8 +169,10 @@ body.gateway-open .skip-link{visibility:hidden}
 .gate-vignette{z-index:-2;background:radial-gradient(ellipse at 50% 46%,rgba(72,15,23,.26),transparent 42%),radial-gradient(ellipse at 50% 50%,transparent 30%,rgba(0,0,0,.75) 100%),linear-gradient(135deg,#141516,#070808 64%)}
 .gate-grain{z-index:3;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.45'/%3E%3C/svg%3E")}
 .gate-header{position:absolute;z-index:5;top:clamp(18px,4vh,42px);left:clamp(18px,5vw,72px);right:clamp(18px,5vw,72px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
-.gate-brand{display:block;width:clamp(112px,13vw,168px);line-height:0;padding:3px 8px;background:var(--paper);border-radius:2px}
-.gate-brand img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.gate-brand{position:relative;display:block;width:80px;height:58px;overflow:hidden;line-height:0;background:var(--paper);border-radius:2px;transition:transform .22s,filter .22s}
+.gate-brand:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.gate-brand:focus-visible{outline:2px solid #d9a7ae;outline-offset:4px}
+.gate-brand img{position:absolute;top:-6px;left:-10px;display:block;width:auto;max-width:none;height:70px;mix-blend-mode:multiply}
 .gate-enter{justify-self:center;display:inline-flex;align-items:center;gap:15px;padding:0 0 8px;border-bottom:1px solid rgba(244,242,238,.48);color:#f4f2ee;font-size:9px;letter-spacing:.2em;text-transform:uppercase;transition:color .22s,border-color .22s,letter-spacing .22s}
 .gate-enter:hover,.gate-enter:focus-visible{color:#d9a7ae;border-color:#d9a7ae;letter-spacing:.24em}
 .gate-enter span{font-size:15px;line-height:1}
@@ -214,7 +216,8 @@ body.gateway-open .skip-link{visibility:hidden}
 .flow-gateway.is-awake .gate-prompt-main{color:#f4f2ee}.flow-gateway.is-awake .gate-prompt-sub{color:#c8858d}
 @media(max-width:700px){
  .gate-header{top:20px;left:17px;right:17px;grid-template-columns:1fr auto;gap:12px}
- .gate-brand{width:112px;padding:2px 5px}
+ .gate-brand{width:72px;height:52px}
+ .gate-brand img{top:-5px;left:-8px;height:64px}
  .gate-enter{grid-column:2;grid-row:1;font-size:8px;letter-spacing:.16em;padding-bottom:6px}
  .gate-sound{position:absolute;top:48px;right:0;min-height:30px;padding:0 9px;background:rgba(9,9,10,.28)}
  .gate-sound span{font-size:7px}
@@ -240,8 +243,8 @@ body.gateway-open .skip-link{visibility:hidden}
   <div class="gate-vignette" aria-hidden="true"></div>
   <div class="gate-grain" aria-hidden="true"></div>
   <header class="gate-header">
-    <a class="gate-brand" href="#inicio" aria-label="PDSF Consultoria">
-      <img src="pdsf-logo.png" alt="PDSF Consultoria — Estratégia, Soluções, Resultados">
+    <a class="gate-brand" href="#inicio" aria-label="PDSF — voltar ao início">
+      <img src="pdsf-logo.png" alt="">
     </a>
     <a class="gate-enter" id="gate-enter" href="#inicio">Entrar no site <span aria-hidden="true">↗</span></a>
     <button class="gate-sound" id="gateway-sound-toggle" type="button" aria-pressed="false" aria-label="Ativar sons de interação">
@@ -591,6 +594,7 @@ body.gateway-open .skip-link{visibility:hidden}
     },reduced?0:850);
   }
   gateEnter.addEventListener('click',enterSite);
+  document.querySelector('.gate-brand').addEventListener('click',enterSite);
 
   function syncSoundControls(){
     const text=audioEnabled?'Som · on':'Som · off';
